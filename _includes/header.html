@@ -1,3 +1,9 @@
+{% if page.lang == "DE" %}
+  {% assign homeurl = site.baseurl %}
+{% else %}
+  {% assign homeurl = site.baseurl | append: "/en" %}
+{% endif%}
+
 <header class="site-header">
 
   <div class="container">
@@ -8,7 +14,7 @@
     </div>
 
     <div class="row">
-    <a class="" href="{{ site.github.url }}{{ site.baseurl }}/">
+    <a class="" href="{{ site.github.url }}{{ homeurl }}/">
       <div class="col-xs-10 site-description">
         <span class="blackout">
         {% if page.lang == "DE" %}
