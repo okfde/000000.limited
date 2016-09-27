@@ -150,22 +150,9 @@ pre {
     }
 }
 
-.blackout {
-        
-    color: black;
-    background: black;
-
-    &:hover {
-        color: black;
-        background: transparent;
-    }
-}
-
 .inverted {
-    
     color: white;
     background: black;
-
 }
 
 .site-header {
@@ -188,10 +175,6 @@ pre {
 .site-footer {
     font-size: $big-font-size;
     line-height: 56px;
-}
-
-.site-title {
-    text-align: right;
 }
 
 .item-wrap {

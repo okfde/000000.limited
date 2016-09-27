@@ -1,3 +1,18 @@
+.blackout {
+        
+    color: black;
+    background: black;
+
+    &:hover {
+        color: black;
+        background: transparent;
+    }
+}
+
+.site-title {
+    text-align: right;
+}
+
 .items-wrap {
   display: flex;
   flex-direction: row;

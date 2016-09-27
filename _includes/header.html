@@ -15,7 +15,10 @@
 
     <div class="row">
     <a class="" href="{{ site.github.url }}{{ homeurl }}/">
-      <div class="col-xs-10 site-description">
+      <div class="col-sm-4 col-sm-push-8 site-title">
+        {{ site.title }}
+      </div>
+      <div class="col-sm-8 col-sm-pull-4 site-description">
         <span class="blackout">
         {% if page.lang == "DE" %}
           FragDenStaat 2016 <br>
@@ -27,9 +30,6 @@
           50 Items
         {% endif%}
         </span>
-      </div>
-      <div class="col-xs-2 site-title">
-        {{ site.title }}
       </div>
     </a>
     </div>
