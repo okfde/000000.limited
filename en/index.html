@@ -1,0 +1,49 @@
+---
+layout: default
+
+lang: EN
+otherlang: 
+  lang: DE
+  url: /
+---
+
+<div class="items-wrap">
+
+  {% for i in (1..site.data.stock.total) %}
+    
+    {% if i <= site.data.stock.sold %}
+        {% assign sold = "true" %}
+      {% else %}
+        {% assign sold = "false" %}
+    {% endif %}
+
+  <div class="item-wrap">
+    
+    {% unless sold == "true" %}
+      <a href="/en/edition">
+    {% endunless %} 
+
+    <img class="img-responsive" src="/img/edition.jpg" alt="">
+  
+    <div class="item-overlay">
+      
+      {% if sold == "true" %}
+        <span class="item-sold">Done</span>
+      {% else %}
+        <span>Glacier Print<br>
+        framed<br>
+        handfolded and punched<br>
+        20x30cm
+        </span>
+      {% endif %}
+
+    </div>
+
+    {% unless sold == "true" %}
+      </a>
+    {% endunless %}
+
+  </div>  
+  {% endfor %}
+
+</div>
