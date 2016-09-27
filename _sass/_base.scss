@@ -250,18 +250,18 @@ label {
   background: #000; /* Gecko Browsers */
 }
 
-::-webkit-input-placeholder {
-   color: red;
+.form-control::-webkit-input-placeholder {
+   color: white;
 }
 
-:-moz-placeholder { /* Firefox 18- */
-   color: red;  
+.form-control:-moz-placeholder { /* Firefox 18- */
+   color: white;  
 }
 
-::-moz-placeholder {  /* Firefox 19+ */
-   color: red;  
+.form-control::-moz-placeholder {  /* Firefox 19+ */
+   color: white;  
 }
 
-:-ms-input-placeholder {  
-   color: red;  
+.form-control:-ms-input-placeholder {  
+   color: white;  
 }
