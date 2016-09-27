@@ -25,7 +25,7 @@ otherlang:
     <img class="img-responsive" src="{{ site.github.url }}/img/edition.jpg" alt="">
   
     <div class="item-overlay">
-      
+      <div class="item-overlay-content">
       {% if sold == "true" %}
         <span class="item-sold">Erledigt</span>
       {% else %}
@@ -35,7 +35,7 @@ otherlang:
         20x30cm
         </span>
       {% endif %}
-
+      </div>
     </div>
 
     {% unless sold == "true" %}

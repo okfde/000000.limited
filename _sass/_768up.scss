@@ -2,9 +2,13 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap; 
-
 }
 
 .item-wrap {
-  width: 20%;
+  width: 18%;
+  margin-right: 2%;
+
+  &:nth-child(5n+0) {
+    margin-right: 0;
+  }
 }
