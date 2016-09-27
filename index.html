@@ -1,0 +1,48 @@
+---
+layout: default
+lang: DE
+otherlang: 
+  lang: EN
+  url: /en/
+---
+
+<div class="items-wrap">
+
+  {% for i in (1..site.data.stock.total) %}
+    
+    {% if i <= site.data.stock.sold %}
+        {% assign sold = "true" %}
+      {% else %}
+        {% assign sold = "false" %}
+    {% endif %}
+
+  <div class="item-wrap">
+    
+    {% unless sold == "true" %}
+      <a href="edition">
+    {% endunless %} 
+
+    <img class="img-responsive" src="/img/edition.jpg" alt="">
+  
+    <div class="item-overlay">
+      
+      {% if sold == "true" %}
+        <span class="item-sold">Erledigt</span>
+      {% else %}
+        <span>Glacier Druck<br>
+        gerahmt<br>
+        handgefaltet und handgelocht<br>
+        20x30cm
+        </span>
+      {% endif %}
+
+    </div>
+
+    {% unless sold == "true" %}
+      </a>
+    {% endunless %}
+
+  </div>  
+  {% endfor %}
+
+</div>

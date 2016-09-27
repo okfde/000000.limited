@@ -1,0 +1,29 @@
+<header class="site-header">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <a href="{{ page.otherlang.url }}">{{ page.otherlang.lang }}</a>
+      </div>  
+    </div>
+
+    <div class="row">
+      <div class="col-xs-6">
+        {% if page.lang == "DE" %}
+          FragDenStaat 2016 <br>
+          limitierte Volkswagen Edition<br>
+          50 Stück
+        {% else %}
+          FragDenStaat 2016 <br>
+          limited Volkswagen Edition<br>
+          50 Items
+        {% endif%}
+      </div>
+      <div class="col-xs-6">
+        <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+      </div>
+    </div>
+
+  </div>
+
+</header>
