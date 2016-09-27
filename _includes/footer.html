@@ -3,10 +3,11 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12 site-footer">
+  
         {% if page.lang == "DE" %}
-          <a href="{{ site.github.url }}/legal">Impressum</a>
+          <a class="blackout" href="{{ site.github.url }}/legal">Impressum</a>
         {% else %}
-          <a href="{{ site.github.url }}/en/legal">Legal</a>
+          <a class="blackout" href="{{ site.github.url }}/en/legal">Legal</a>
         {% endif%}
       </div>
     </div>

@@ -2,14 +2,15 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-xs-12">
-        <a href="{{ site.github.url }}{{ page.otherlang.url }}">{{ page.otherlang.lang }}</a>
+      <div class="col-xs-12 site-language-selector">
+        <a class="blackout" href="{{ site.github.url }}{{ page.otherlang.url }}">{{ page.otherlang.lang }}</a>
       </div>  
     </div>
 
     <div class="row">
     <a class="" href="{{ site.github.url }}{{ site.baseurl }}/">
-      <div class="col-xs-6 site-description">
+      <div class="col-xs-10 site-description">
+        <span class="blackout">
         {% if page.lang == "DE" %}
           FragDenStaat 2016 <br>
           limitierte Volkswagen Edition<br>
@@ -19,8 +20,9 @@
           limited Volkswagen Edition<br>
           50 Items
         {% endif%}
+        </span>
       </div>
-      <div class="col-xs-6 site-title">
+      <div class="col-xs-2 site-title">
         {{ site.title }}
       </div>
     </a>

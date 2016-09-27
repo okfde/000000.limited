@@ -150,13 +150,37 @@ pre {
     }
 }
 
+.blackout {
+        
+    color: black;
+    background: black;
+
+    &:hover {
+        color: black;
+        background: transparent;
+    }
+}
+
+.inverted {
+    
+    color: white;
+    background: black;
+
+}
+
 .site-header {
     margin-bottom: 50px;
+    margin-top: 25px;
 }
 
 .site-footer {
     margin-top: 50px;
     margin-bottom: 50px;
+}
+
+.site-language-selector {
+    line-height: 20px;
+    margin-bottom: 15px;
 }
 
 .site-description,
@@ -198,8 +222,12 @@ pre {
     text-align: center;
 
     .item-sold {
-        font-size: $big-font-size; 
+        font-size: $med-font-size; 
     }
 }
 
+.contact-form {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
 
