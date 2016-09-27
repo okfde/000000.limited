@@ -215,3 +215,25 @@ pre {
     margin-bottom: 50px;
 }
 
+.btn, .form-control  {
+    border-radius: 0;
+    //border: 0;
+    box-shadow: none;
+    //border-bottom: 2px solid black;
+}
+
+.form-control:focus {
+    border-color: black;
+    box-shadow: none;
+}
+
+label {
+    font-weight: 500;
+}
+
+::selection {
+  background: #000; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #000; /* Gecko Browsers */
+}

@@ -10,9 +10,11 @@
 .btn-info,
 .btn-warning,
 .btn-danger {
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
+/*  text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
-          box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);*/
+          text-transform: uppercase;
+          font-weight: 500;
 }
 .btn-default:active,
 .btn-primary:active,
@@ -26,8 +28,8 @@
 .btn-info.active,
 .btn-warning.active,
 .btn-danger.active {
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
-          box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+/*  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);*/
 }
 .btn-default .badge,
 .btn-primary .badge,
@@ -42,7 +44,7 @@
   background-image: none;
 }
 .btn-default {
-  text-shadow: 0 1px 0 #fff;
+  /* text-shadow: 0 1px 0 #fff;
   background-image: -webkit-linear-gradient(top, #fff 0%, #e0e0e0 100%);
   background-image:      -o-linear-gradient(top, #fff 0%, #e0e0e0 100%);
   background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#e0e0e0));
@@ -50,18 +52,22 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe0e0e0', GradientType=0);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   background-repeat: repeat-x;
-  border-color: #dbdbdb;
-  border-color: #ccc;
+    */
+  border-color: #000;
+  background: black;
+  color: white;
 }
 .btn-default:hover,
 .btn-default:focus {
-  background-color: #e0e0e0;
-  background-position: 0 -15px;
+  background-color: #000;
+  color: white;
+  border-color: black;
+  /*background-position: 0 -15px;*/
 }
 .btn-default:active,
 .btn-default.active {
-  background-color: #e0e0e0;
-  border-color: #dbdbdb;
+/*  background-color: #e0e0e0;
+  border-color: #dbdbdb;*/
 }
 .btn-default:disabled,
 .btn-default[disabled] {
