@@ -190,6 +190,7 @@ pre {
 .image-caption {
     font-size: 14px;
     max-width: 50%;
+    margin-top: 15px;
 }
 
 .item-overlay {
@@ -227,6 +228,11 @@ pre {
     //border-bottom: 2px solid black;
 }
 
+.form-control {
+    background: black;
+    color: white;
+}
+
 .form-control:focus {
     border-color: black;
     box-shadow: none;
@@ -239,6 +245,23 @@ label {
 ::selection {
   background: #000; /* WebKit/Blink Browsers */
 }
+
 ::-moz-selection {
   background: #000; /* Gecko Browsers */
+}
+
+::-webkit-input-placeholder {
+   color: red;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: red;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: red;  
+}
+
+:-ms-input-placeholder {  
+   color: red;  
 }
