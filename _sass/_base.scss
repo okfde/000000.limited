@@ -99,7 +99,7 @@ a {
     }
 
     &:hover {
-        color: #999;
+        color: #000;
         text-decoration: none;
     }
 
@@ -151,6 +151,19 @@ pre {
         border: 0;
         padding-right: 0;
         padding-left: 0;
+    }
+}
+
+.blackout {
+        
+    color: black;
+    background: black;
+
+    &:hover,
+    &:visited,
+    &:focus {
+        color: black;
+        background: transparent;
     }
 }
 
