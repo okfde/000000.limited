@@ -106,6 +106,21 @@ a {
     }
 }
 
+.site-header a, 
+.site-footer a {
+    color: #000;
+
+    &:visited {
+        color: #000;
+    }
+
+    &:hover {
+        color: #000;
+    }
+
+    &:focus {
+    }
+}
 
 
 /**
