@@ -102,6 +102,10 @@ a {
         color: #999;
         text-decoration: none;
     }
+
+    &:focus {
+        text-decoration: none;
+    }
 }
 
 
