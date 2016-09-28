@@ -53,9 +53,9 @@
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   background-repeat: repeat-x;
     */
-  border-color: #000;
-  background: black;
-  color: white;
+  border: none;
+  color: black;
+
 }
 .btn-default:hover,
 .btn-default:focus {

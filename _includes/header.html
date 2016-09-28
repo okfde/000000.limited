@@ -14,24 +14,26 @@
     </div>
 
     <div class="row">
-    <a class="" href="{{ site.github.url }}{{ homeurl }}/">
       <div class="col-sm-4 col-sm-push-8 site-title">
-        {{ site.title }}
+          <a class="" href="{{ site.github.url }}{{ homeurl }}/">
+            {{ site.title }}
+          </a>
       </div>
       <div class="col-sm-8 col-sm-pull-4 site-description">
-        <span class="blackout">
         {% if page.lang == "DE" %}
+          <a class="blackout" href="{{ site.github.url }}/edition">
           FragDenStaat 2016 <br>
           limitierte Volkswagen-Edition<br>
           50 Exemplare
+          </a>
         {% else %}
+          <a class="blackout" href="{{ site.github.url }}/en/edition">
           FragDenStaat 2016 <br>
           limited Volkswagen Edition<br>
           50 Editions
+          </a>
         {% endif%}
-        </span>
       </div>
-    </a>
     </div>
 
   </div>

@@ -91,15 +91,15 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-    color: $brand-color;
+    color: #999;
     text-decoration: none;
 
     &:visited {
-        color: $brand-color;
+        color: #999;
     }
 
     &:hover {
-        color: $text-color;
+        color: #999;
         text-decoration: none;
     }
 }
@@ -177,6 +177,15 @@ pre {
     line-height: 56px;
 }
 
+.site-title a {
+    &,
+    &:hover, 
+    &:visited, 
+    &:focus {
+        color: #000;
+    }
+}
+
 .item-wrap {
     position: relative;
 
@@ -222,15 +231,23 @@ pre {
 }
 
 .btn, .form-control  {
-    border-radius: 0;
+    border-radius: 2px;
     //border: 0;
     box-shadow: none;
     //border-bottom: 2px solid black;
+    font-size: 18px;
+    padding: 6px 16px;
+}
+
+.btn {
+
 }
 
 .form-control {
-    background: black;
-    color: white;
+    // background: #CCC;
+    color: black;
+    height: 48px; 
+
 }
 
 .form-control:focus {
@@ -242,6 +259,10 @@ label {
     font-weight: 500;
 }
 
+textarea {
+    resize: none;
+}
+
 ::selection {
   background: #000; /* WebKit/Blink Browsers */
 }
@@ -251,17 +272,17 @@ label {
 }
 
 .form-control::-webkit-input-placeholder {
-   color: white;
+   color: black;
 }
 
 .form-control:-moz-placeholder { /* Firefox 18- */
-   color: white;  
+   color: black;  
 }
 
 .form-control::-moz-placeholder {  /* Firefox 19+ */
-   color: white;  
+   color: black;  
 }
 
 .form-control:-ms-input-placeholder {  
-   color: white;  
+   color: black;  
 }

@@ -3,7 +3,9 @@
     color: black;
     background: black;
 
-    &:hover {
+    &:hover,
+    &:visited,
+    &:focus {
         color: black;
         background: transparent;
     }
