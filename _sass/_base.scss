@@ -18,8 +18,6 @@ body {
     color: $text-color;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
-    -webkit-font-feature-settings: "kern" 1;
-    -moz-font-feature-settings: "kern" 1;
     -o-font-feature-settings: "kern" 1;
     font-feature-settings: "kern" 1;
     font-kerning: normal;
@@ -154,18 +152,6 @@ pre {
     }
 }
 
-.blackout {
-        
-    color: black;
-    background: black;
-
-    &:hover,
-    &:visited,
-    &:focus {
-        color: black;
-        background: transparent;
-    }
-}
 
 .inverted {
     color: white;
@@ -178,8 +164,8 @@ pre {
 }
 
 .site-footer {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 .site-language-selector {
@@ -205,9 +191,11 @@ pre {
 
 .item-wrap {
     position: relative;
+    margin-bottom: 20px;
 
     &:hover {
         .item-overlay {
+            display: -ms-flexbox;
             display: flex;
         }
     }
@@ -217,6 +205,7 @@ pre {
     font-size: 14px;
     max-width: 50%;
     margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .item-overlay {
@@ -227,9 +216,13 @@ pre {
     background: black;
 
     display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        -ms-grid-row-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
 }
 
 .item-overlay-content {
@@ -243,15 +236,15 @@ pre {
 }
 
 .contact-form {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 .btn, .form-control  {
     border-radius: 2px;
-    //border: 0;
+    /*border: 0;*/
     box-shadow: none;
-    //border-bottom: 2px solid black;
+    /*border-bottom: 2px solid black;*/
     font-size: 18px;
     padding: 6px 16px;
 }
@@ -261,7 +254,7 @@ pre {
 }
 
 .form-control {
-    // background: #CCC;
+    /* background: #CCC;*/
     color: black;
     height: 48px; 
 
@@ -278,6 +271,10 @@ label {
 
 textarea {
     resize: none;
+}
+
+::-moz-selection {
+  background: #000; /* WebKit/Blink Browsers */
 }
 
 ::selection {

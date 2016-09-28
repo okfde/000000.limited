@@ -1,13 +1,28 @@
 
+.blackout {
+        
+    color: black;
+    background: black;
+
+    &:hover,
+    &:visited,
+    &:focus {
+        color: black;
+        background: transparent;
+    }
+}
 
 .site-title {
     text-align: right;
 }
 
 .items-wrap {
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap; 
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; 
 }
 
 .item-wrap {
@@ -18,4 +33,14 @@
   &:nth-child(5n+0) {
     margin-right: 0;
   }
+}
+
+.contact-form {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.site-footer {
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
