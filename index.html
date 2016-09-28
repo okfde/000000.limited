@@ -19,15 +19,16 @@ otherlang:
 
   <div class="item-wrap">
     
-    {% unless sold == "true" %}
       <a href="edition">
-    {% endunless %} 
 
     <img class="img-responsive" src="{{ site.github.url }}/img/edition.jpg" alt="">
   
     <div class="item-overlay">
       <div class="item-overlay-content">
+        
+        {% if sold == "true" %}
         <span class="item-sold">Erledigt</span>
+        {% else %}
         <span>Giclée-Druck<br>
         gerahmt<br>
         handgefaltet und handgelocht<br>
