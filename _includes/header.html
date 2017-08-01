@@ -9,7 +9,22 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12 site-language-selector">
-        <a class="blackout" href="{{ site.github.url }}{{ page.otherlang.url }}">{{ page.otherlang.lang }}</a>
+
+        {% if page.layout == 'edition' %}
+          
+          {% if page.edition == 2016 %}
+            <a class="blackout" href="{{ site.github.url }}/edition">2017</a>
+          {% else %}
+            <a class="blackout" href="{{ site.github.url }}/edition2016">2016</a>
+          {% endif %}
+        
+        {% else %}
+            <a class="blackout" href="{{ site.github.url }}#2016">2016</a>
+        {% endif %}
+
+
+       <a class="blackout" href="{{ site.github.url }}{{ page.otherlang.url }}">
+        {{ page.otherlang.lang }}</a>
       </div>  
     </div>
 
@@ -19,19 +34,12 @@
             {{ site.title }}
           </a>
       </div>
+      
       <div class="col-sm-8 col-sm-pull-4 site-description">
-        {% if page.lang == "DE" %}
-          <a class="blackout" href="{{ site.github.url }}/edition">
-          FragDenStaat 2016 <br>
-          limitierte Volkswagen-Edition<br>
-          50 Exemplare - Jetzt bestellen!
-          </a>
+        {% if page.edition == 2016 %}
+          {% include header-text-2016.html url="edition2016"%}
         {% else %}
-          <a class="blackout" href="{{ site.github.url }}/en/edition">
-          FragDenStaat 2016 <br>
-          limited Volkswagen Edition<br>
-          50 Editions
-          </a>
+          {% include header-text-2017.html url="edition"%}
         {% endif%}
       </div>
     </div>

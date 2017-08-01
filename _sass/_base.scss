@@ -89,7 +89,8 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-    color: #999;
+    
+    color: black;
     text-decoration: none;
 
     &:visited {
@@ -103,6 +104,30 @@ a {
 
     &:focus {
         text-decoration: none;
+    }
+
+}
+
+
+.page-content {   
+        a {
+            color: black;
+            text-decoration: none;
+            background-color: black;
+
+        &:visited {
+            color: #000;
+        }
+
+        &:hover {
+            color: #000;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        &:focus {
+            text-decoration: none;
+        }
     }
 }
 
@@ -174,7 +199,6 @@ pre {
 }
 
 .site-header {
-    margin-bottom: 50px;
     margin-top: 25px;
 }
 
@@ -193,6 +217,10 @@ pre {
 .site-footer {
     font-size: $big-font-size;
     line-height: 56px;
+}
+
+.site-description {
+    margin-bottom: 50px;
 }
 
 .site-title a {
@@ -255,17 +283,32 @@ pre {
     margin-bottom: 25px;
 }
 
+.form-group {
+    margin-bottom: 0;
+}
+
 .btn, .form-control  {
-    border-radius: 2px;
-    /*border: 0;*/
+    border-radius: 0;
+    border: 4px solid black;
     box-shadow: none;
-    /*border-bottom: 2px solid black;*/
+    border-bottom: none;
     font-size: 18px;
     padding: 6px 16px;
 }
 
-.btn {
+// textarea.form-control{
+//     border-bottom: 5px solid black;
+// }
 
+.btn {
+    border-bottom: 4px solid black;
+    width: 100%;
+    background-color: black;
+}
+
+.btn:hover {
+    // background-color: transparent;
+    // color: black;
 }
 
 .form-control {

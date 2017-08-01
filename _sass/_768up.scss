@@ -12,6 +12,28 @@
     }
 }
 
+.blackout17 {
+  display: block;
+  line-height: 1.4;
+
+  span {
+    color: black;
+    background: black;
+  }
+
+    &:hover,
+    &:visited,
+    &:focus {
+      span {
+        color: black;
+        background: transparent;
+      }
+    }
+
+}
+
+
+
 .site-title {
     text-align: right;
 }
