@@ -8,39 +8,67 @@ otherlang:
 ---
 
 <div class="items-wrap">
-
-  {% for i in (1..site.data.stock.total) %}
-    
-    {% if i <= site.data.stock.sold %}
-        {% assign sold = "true" %}
-      {% else %}
-        {% assign sold = "false" %}
-    {% endif %}
+  {% for i in (1..site.data.stock2017.total) %}
+  {% if i <= site.data.stock2017.sold %}
+      {% assign sold = "true" %}
+    {% else %}
+      {% assign sold = "false" %}
+  {% endif %}
 
   <div class="item-wrap">
-    
-      <a href="{{ site.github.url }}/en/edition">
-
-    <img class="img-responsive" src="{{ site.github.url }}/img/edition.jpg" alt="">
-  
-    <div class="item-overlay">
-      <div class="item-overlay-content">
-      {% if sold == "true" %}
-        <span class="item-sold">Done</span>
-      {% else %}
-        <span>Giclée Print<br>
-        framed<br>
-        20x30cm
-        </span>
-      {% endif %}
+    <a href="/en/edition">
+      <img class="img-responsive" src="{{ site.github.url }}/img/edition2017.png" alt="">
+      <div class="item-overlay">
+        <div class="item-overlay-content">
+          {% if sold == "true" %}
+          <span class="item-sold">Done</span>
+          {% else %}
+          <span>Giclée Print<br>
+          framed<br>
+          20x30cm
+          </span>
+        {% endif %}
+        </div>
       </div>
-    </div>
-
-    {% unless sold == "true" %}
-      </a>
-    {% endunless %}
-
+    </a>
   </div>  
   {% endfor %}
+</div>
 
+
+<div class="row" id="2016">
+  <div class="col-sm-8 site-description">
+    <span class="blackout">
+        {% include header-text-2016.html url="edition2016" %}
+    </span>
+  </div>
+</div>
+
+<div class="items-wrap">
+  {% for i in (1..site.data.stock2016.total) %}
+  {% if i <= site.data.stock2016.sold %}
+      {% assign sold = "true" %}
+    {% else %}
+      {% assign sold = "false" %}
+  {% endif %}
+
+  <div class="item-wrap">
+    <a href="/en/edition2016">
+      <img class="img-responsive" src="{{ site.github.url }}/img/edition2016.jpg" alt="">
+      <div class="item-overlay">
+        <div class="item-overlay-content">
+          {% if sold == "true" %}
+          <span class="item-sold">Done</span>
+          {% else %}
+          <span>Giclée Print<br>
+          framed<br>
+          handfolded and punched<br>
+          20x30cm
+          </span>
+        {% endif %}
+        </div>
+      </div>
+    </a>
+  </div>  
+  {% endfor %}
 </div>
