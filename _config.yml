@@ -11,7 +11,7 @@ email: mail@fragdenstaat.de
 description: > # this means to ignore newlines until "baseurl:"
   #000000 ist die limitierte Kunstedition zur Informationsfreiheit von FragDenStaat.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://000000.limited" # the base hostname & protocol for your site
+url: "https://000000.limited" # the base hostname & protocol for your site
 #twitter_username: jekyllrb
 #github_username:  jekyll
 
