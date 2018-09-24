@@ -1,7 +1,10 @@
 {% if page.lang == "DE" %}
+<!-- not sure why there is a base url and github url -->
   {% assign homeurl = site.baseurl %}
+  {% assign githuburl = site.github.url %}
 {% else %}
   {% assign homeurl = site.baseurl | append: "/en" %}
+  {% assign githuburl = site.github.url | append: "/en" %}
 {% endif%}
 
 <header class="site-header">
