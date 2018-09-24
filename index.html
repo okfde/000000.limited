@@ -9,8 +9,8 @@ otherlang:
 ---
 
 <div class="items-wrap">
-  {% for i in (1..site.data.stock2017.total) %}
-  {% if i <= site.data.stock2017.sold %}
+  {% for i in (1..site.data.stock2018.total) %}
+  {% if i <= site.data.stock2018.sold %}
       {% assign sold = "true" %}
     {% else %}
       {% assign sold = "false" %}
@@ -18,7 +18,7 @@ otherlang:
 
   <div class="item-wrap">
     <a href="/edition">
-      <img class="img-responsive" src="{{ site.github.url }}/img/edition2017.jpg" alt="">
+      <img class="img-responsive" src="{{ site.github.url }}/img/edition2018.jpg" alt="">
       <div class="item-overlay">
         <div class="item-overlay-content">
           {% if sold == "true" %}
@@ -36,6 +36,41 @@ otherlang:
   {% endfor %}
 </div>
 
+<div class="row" id="2017">
+  <div class="col-sm-8 site-description">
+    <span class="blackout">
+        {% include header-text-2017.html url="edition2017" %}
+    </span>
+  </div>
+</div>
+
+<div class="items-wrap">
+  {% for i in (1..site.data.stock2017.total) %}
+  {% if i <= site.data.stock2017.sold %}
+      {% assign sold = "true" %}
+    {% else %}
+      {% assign sold = "false" %}
+  {% endif %}
+
+  <div class="item-wrap">
+    <a href="edition2017">
+      <img class="img-responsive" src="{{ site.github.url }}/img/edition2017.jpg" alt="">
+      <div class="item-overlay">
+        <div class="item-overlay-content">
+          {% if sold == "true" %}
+          <span class="item-sold">Erledigt</span>
+          {% else %}
+          <span>Giclée-Druck<br>
+          gerahmt<br>
+          20x30cm
+          </span>
+        {% endif %}
+        </div>
+      </div>
+    </a>
+  </div>  
+  {% endfor %}
+</div>
 
 <div class="row" id="2016">
   <div class="col-sm-8 site-description">
@@ -72,3 +107,4 @@ otherlang:
   </div>  
   {% endfor %}
 </div>
+
