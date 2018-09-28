@@ -8,6 +8,43 @@ otherlang:
 ---
 
 <div class="items-wrap">
+  {% for i in (1..site.data.stock2018.total) %}
+  {% if i <= site.data.stock2018.sold %}
+      {% assign sold = "true" %}
+    {% else %}
+      {% assign sold = "false" %}
+  {% endif %}
+
+  <div class="item-wrap">
+    <a href="/en/edition2018">
+      <img class="img-responsive" src="{{ site.github.url }}/img/edition2018.jpg" alt="">
+      <div class="item-overlay">
+        <div class="item-overlay-content">
+          {% if sold == "true" %}
+          <span class="item-sold">Done</span>
+          {% else %}
+          <span>Giclée Print<br>
+          framed<br>
+-         handprinted<br>
+          20x30cm
+          </span>
+        {% endif %}
+        </div>
+      </div>
+    </a>
+  </div>  
+  {% endfor %}
+</div>
+
+<div class="row" id="2017">
+  <div class="col-sm-8 site-description">
+    <span class="blackout">
+        {% include header-text-2017.html url="edition2017" %}
+    </span>
+  </div>
+</div>
+
+<div class="items-wrap">
   {% for i in (1..site.data.stock2017.total) %}
   {% if i <= site.data.stock2017.sold %}
       {% assign sold = "true" %}
@@ -16,8 +53,8 @@ otherlang:
   {% endif %}
 
   <div class="item-wrap">
-    <a href="/en/edition">
-      <img class="img-responsive" src="{{ site.github.url }}/img/edition2017.png" alt="">
+    <a href="/en/edition2017">
+      <img class="img-responsive" src="{{ site.github.url }}/img/edition2017.jpg" alt="">
       <div class="item-overlay">
         <div class="item-overlay-content">
           {% if sold == "true" %}
