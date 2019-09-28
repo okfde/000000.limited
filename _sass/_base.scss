@@ -110,24 +110,21 @@ a {
 
 
 .page-content {   
-        a {
-            color: black;
-            text-decoration: none;
-            background-color: black;
+    a, &:visited {
+        color: #fff;
+        background-color: #000;
+        text-decoration: none;
+    }
 
-        &:visited {
-            color: #000;
-        }
+    &:hover {
+        color: #000;
+        background-color: #fff;
+        background-color: transparent;
+        text-decoration: none;
+    }
 
-        &:hover {
-            color: #000;
-            background-color: transparent;
-            text-decoration: none;
-        }
-
-        &:focus {
-            text-decoration: none;
-        }
+    &:focus {
+        text-decoration: none;
     }
 }
 
@@ -357,4 +354,9 @@ textarea {
 
 .form-control:-ms-input-placeholder {  
    color: black;  
+}
+
+
+.mb-5 {
+    margin-bottom: 2.5rem;
 }

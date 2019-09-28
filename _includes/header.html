@@ -15,23 +15,23 @@
 
         {% if page.layout == 'edition' %}
           
-          {% if page.edition == 2016 %}
-            <a class="blackout" href="{{ githuburl }}/edition2017">2017</a>
-            <a class="blackout" href="{{ githuburl }}/edition2018">2018</a>
-          {% else %}
-            {% if page.edition == 2017 %}
-              <a class="blackout" href="{{ githuburl }}/edition2016">2016</a>
-              <a class="blackout" href="{{ githuburl }}/edition2018">2018</a>
-            {% else %}
-              <a class="blackout" href="{{ githuburl }}/edition2016">2016</a>
-              <a class="blackout" href="{{ githuburl }}/edition2017">2017</a>
-            {% endif %}
+          {% if page.edition != 2016 %}
+            <a class="blackout" href="{{ githuburl }}/edition2016">2016</a>
           {% endif %}
-
+          {% if page.edition != 2017 %}
+            <a class="blackout" href="{{ githuburl }}/edition2017">2017</a>
+          {% endif %}
+          {% if page.edition != 2018 %}
+            <a class="blackout" href="{{ githuburl }}/edition2018">2018</a>
+          {% endif %}
+          {% if page.edition != 2019 %}
+            <a class="blackout" href="https://fragdenstaat.de/spenden/kunstedition/">2019</a>
+          {% endif %}
         
         {% else %}
             <a class="blackout" href="{{ githuburl }}#2016">2016</a>
             <a class="blackout" href="{{ githuburl }}#2017">2017</a>
+            <a class="blackout" href="{{ githuburl }}#2018">2018</a>
         {% endif %}
 
 
@@ -46,20 +46,7 @@
             {{ site.title }}
           </a>
       </div>
-      
-      <div class="col-sm-8 col-sm-pull-4 site-description">
-        {% if page.edition == 2016 %}
-          {% include header-text-2016.html url="edition2016"%}
-        {% else %}
-          {% if page.edition == 2017 %}
-            {% include header-text-2017.html url="edition2017"%}
-          {% else %}
-            {% include header-text-2018.html url="edition2018"%}
-          {% endif%}
-        {% endif%}
-      </div>
     </div>
-
   </div>
 
 </header>

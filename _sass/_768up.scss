@@ -38,25 +38,6 @@
     text-align: right;
 }
 
-.items-wrap {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap; 
-}
-
-.item-wrap {
-  width: 18%;
-  margin-right: 2%;
-  margin-bottom: 20px;
-
-  &:nth-of-type(5n+0) {
-    margin-right: 0;
-  }
-}
-
 .contact-form {
     margin-top: 50px;
     margin-bottom: 50px;
