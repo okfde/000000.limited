@@ -7,9 +7,11 @@
       <div class="col-xs-12 site-footer">
   
         {% if page.lang == "DE" %}
-          <a class="blackout" href="{{ site.github.url }}/legal">Impressum</a>
+          <a class="blackout" href="https://okfn.de/impressum/">Impressum</a> /
+          <a class="blackout" href="https://okfn.de/impressum/#datenschutzerkl%C3%A4rung">Datenschutzerklärung</a>
         {% else %}
-          <a class="blackout" href="{{ site.github.url }}/en/legal">Legal</a>
+          <a class="blackout" href="https://okfn.de/en/impressum/">Legal</a> /
+          <a class="blackout" href="https://okfn.de/en/impressum/#privacy-policy">Privacy</a>
         {% endif%}
       </div>
     </div>
@@ -28,6 +30,7 @@
   var _paq = _paq || [];
   _paq.push(["setDomains", ["*.000000.limited"]]);
   _paq.push(['trackPageView']);
+  _paq.push(['disableCookies']);
   _paq.push(['enableLinkTracking']);
   (function() {
     var u="//traffic.okfn.de/";
@@ -37,5 +40,4 @@
     g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
   })();
 </script>
-<noscript><p><img src="//traffic.okfn.de/piwik.php?idsite=26" style="border:0;" alt="" /></p></noscript>
 <!-- End Piwik Code -->
