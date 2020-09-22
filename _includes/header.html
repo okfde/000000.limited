@@ -1,10 +1,10 @@
 {% if page.lang == "DE" %}
 <!-- not sure why there is a base url and github url -->
-  {% assign homeurl = site.baseurl %}
-  {% assign githuburl = site.github.url %}
+{% assign homeurl = site.baseurl %}
+{% assign githuburl = site.github.url %}
 {% else %}
-  {% assign homeurl = site.baseurl | append: "/en" %}
-  {% assign githuburl = site.github.url | append: "/en" %}
+{% assign homeurl = site.baseurl | append: "/en" %}
+{% assign githuburl = site.github.url | append: "/en" %}
 {% endif%}
 
 <header class="site-header">
@@ -14,40 +14,41 @@
       <div class="col-xs-12 site-language-selector">
 
         {% if page.layout == 'edition' %}
-          
-          {% if page.edition != 2016 %}
-            <a class="blackout" href="{{ githuburl }}/edition2016">2016</a>
-          {% endif %}
-          {% if page.edition != 2017 %}
-            <a class="blackout" href="{{ githuburl }}/edition2017">2017</a>
-          {% endif %}
-          {% if page.edition != 2018 %}
-            <a class="blackout" href="{{ githuburl }}/edition2018">2018</a>
-          {% endif %}
-          {% if page.edition != 2019 %}
-            <a class="blackout" href="{{ githuburl }}/edition2019">2019</a>
-          {% endif %}
-          {% if page.edition != 2020 %}
-            <a class="blackout" href="https://fragdenstaat.de/spenden/kunstedition/">2020</a>
-          {% endif %}
-        
+
+        {% if page.edition != 2016 %}
+        <a class="blackout" href="{{ githuburl }}/edition2016">2016</a>
+        {% endif %}
+        {% if page.edition != 2017 %}
+        <a class="blackout" href="{{ githuburl }}/edition2017">2017</a>
+        {% endif %}
+        {% if page.edition != 2018 %}
+        <a class="blackout" href="{{ githuburl }}/edition2018">2018</a>
+        {% endif %}
+        {% if page.edition != 2019 %}
+        <a class="blackout" href="{{ githuburl }}/edition2019">2019</a>
+        {% endif %}
+        {% if page.edition != 2020 %}
+        <a class="blackout" href="https://fragdenstaat.de/spenden/kunstedition/">2020</a>
+        {% endif %}
+
         {% else %}
-            <a class="blackout" href="{{ githuburl }}#2016">2016</a>
-            <a class="blackout" href="{{ githuburl }}#2017">2017</a>
-            <a class="blackout" href="{{ githuburl }}#2018">2018</a>
+        <a class="blackout" href="{{ githuburl }}#2016">2016</a>
+        <a class="blackout" href="{{ githuburl }}#2017">2017</a>
+        <a class="blackout" href="{{ githuburl }}#2018">2018</a>
+        <a class="blackout" href="{{ githuburl }}#2019">2019</a>
         {% endif %}
 
 
-       <a class="blackout" href="{{ site.github.url }}{{ page.otherlang.url }}">
-        {{ page.otherlang.lang }}</a>
-      </div>  
+        <a class="blackout" href="{{ site.github.url }}{{ page.otherlang.url }}">
+          {{ page.otherlang.lang }}</a>
+      </div>
     </div>
 
     <div class="row">
       <div class="col-sm-4 col-sm-push-8 site-title">
-          <a class="" href="{{ githuburl }}{{ homeurl }}/">
-            {{ site.title }}
-          </a>
+        <a class="" href="{{ githuburl }}{{ homeurl }}/">
+          {{ site.title }}
+        </a>
       </div>
     </div>
   </div>
