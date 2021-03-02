@@ -1,39 +1,9 @@
-{% if page.lang == "DE" %}
-  {% assign messagestring = "Nachricht" %}
-  {% assign buttonstring = "Abschicken" %}
-{% else %}
-  {% assign messagestring = "Message" %}
-  {% assign buttonstring = "Submit" %}
-{% endif%}
-
 <div class="contact-form">
-<form class="form-horizontal" method="POST" action="https://formspree.io/info@fragdenstaat.de">
-  <div class="form-group">
-    <label for="inputName" class="sr-only control-label">Name</label>
-    <div class="col-xs-12">
-      <input type="text" name="Name" class="form-control" placeholder="Name" id="inputName">
-    </div>
-  </div>
-
-  <div class="form-group">
-    <label for="inputEmail" class="sr-only control-label">E-Mail</label>
-    <div class="col-xs-12">
-      <input type="email" name="EMail" class="form-control" placeholder="E-Mail" id="inputEmail">
-    </div>
-  </div>
-
-  <div class="form-group">
-    <label for="inputMessage" class="sr-only control-label">{{ messagestring }}</label>
-    <div class="col-xs-12">
-      <textarea name="Message" rows="3" placeholder="{{ messagestring }}" class="form-control" id="inputMessage"></textarea>
-    </div>
-  </div>
-
-  <div class="form-group">
-    <div class="col-xs-12">
-      <input type="hidden" name="edition" value="{{ page.edition }}" />
-      <button type="submit" class="btn btn-default">{{ buttonstring }}</button>
-    </div>
-  </div>
-</form>
+  <a href="https://fragdenstaat.de/spenden/kunstedition/#form" class="d-block btn">
+    {% if page.lang == "DE" %}
+      Fördermitglied werden und Kunstedition erhalten!
+    {% else %}
+      Become a supporting member and receive your Edition!
+    {% endif %}
+  </a>
 </div>
