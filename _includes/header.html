@@ -12,35 +12,16 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12 site-language-selector">
-
-        {% if page.layout == 'edition' %}
-
-        {% if page.edition != 2016 %}
-        <a class="blackout" href="{{ githuburl }}/edition2016">2016</a>
-        {% endif %}
-        {% if page.edition != 2017 %}
-        <a class="blackout" href="{{ githuburl }}/edition2017">2017</a>
-        {% endif %}
-        {% if page.edition != 2018 %}
-        <a class="blackout" href="{{ githuburl }}/edition2018">2018</a>
-        {% endif %}
-        {% if page.edition != 2019 %}
-        <a class="blackout" href="{{ githuburl }}/edition2019">2019</a>
-        {% endif %}
-        {% if page.edition != 2020 %}
-        <a class="blackout" href="https://fragdenstaat.de/spenden/kunstedition/">2020</a>
-        {% endif %}
-
-        {% else %}
-        <a class="blackout" href="{{ githuburl }}#2016">2016</a>
-        <a class="blackout" href="{{ githuburl }}#2017">2017</a>
-        <a class="blackout" href="{{ githuburl }}#2018">2018</a>
-        <a class="blackout" href="{{ githuburl }}#2019">2019</a>
-        {% endif %}
+        {% for edition in (site.data.editions | sort: "year", "first" %}
+          <a class="blackout my-1" href="{{ githuburl }}/edition{{ edition.year }}">
+            {{ edition.year }}
+          </a>
+        {% endfor %}
 
 
         <a class="blackout" href="{{ site.github.url }}{{ page.otherlang.url }}">
-          {{ page.otherlang.lang }}</a>
+          {{ page.otherlang.lang }}
+        </a>
       </div>
     </div>
 
