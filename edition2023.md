@@ -7,9 +7,6 @@ caption: FragDenStaat 2023. Limitierte Lage-Edition. Giclée-Druck, mattes Papie
 
 edition: 2023
 lang: DE
-otherlang:
-  lang: EN
-  url: /en/edition2023
 ---
 
 Eigentlich garantieren Informationsfreiheitsgesetze den Zugang zu Informationen. Der diesjährige Ausschnitt für unsere limitierte Kunstedition zeigt, wie schnell damit Schluss ist – und kunstvoll, unironisch geschwärzt wird.
