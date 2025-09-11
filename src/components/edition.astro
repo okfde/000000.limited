@@ -35,7 +35,7 @@ const prevEdition = editions.find((e) => e.data.year === edition.year - 1);
           {
             prevEdition ? (
               <a
-                href={`/edition${prevEdition.data.year}`}
+                href={`/edition${prevEdition.data.year}/`}
                 class="flex items-center justify-center py-2 px-4 bg-stone-600 text-white shadow-lg hover:bg-stone-500 motion-safe:transition-colors"
                 data-astro-prefetch
               >
@@ -50,7 +50,7 @@ const prevEdition = editions.find((e) => e.data.year === edition.year - 1);
           }
 
           <a
-            href="/overview/"
+            href="/"
             class="flex items-center justify-center py-2 px-4 bg-stone-600 text-white hover:bg-stone-500 motion-safe:transition-colors"
             title="Übersicht aller Kunsteditionen"
             data-astro-prefetch
@@ -79,7 +79,7 @@ const prevEdition = editions.find((e) => e.data.year === edition.year - 1);
           {
             nextEdition ? (
               <a
-                href={`/edition${nextEdition.data.year}`}
+                href={`/edition${nextEdition.data.year}/`}
                 class="flex items-center justify-center py-2 px-4 bg-stone-600 text-white shadow-lg hover:bg-stone-500 motion-safe:transition-colors ms-auto"
                 data-astro-prefetch
               >
