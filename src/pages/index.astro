@@ -32,10 +32,21 @@ const editions = (await getCollection('editions')).map((e) => e.data);
                 wieder, wenn sie uns Informationen vorenthalten wollen. Die
                 schönsten Exemplare werden jedes Jahr zu einer Kunstedition.
               </p>
-              <div>
+              <div class="flex flex-wrap gap-4">
+                <a
+                  href={`/edition${editions[0].id}/`}
+                  class="inline-flex w-auto items-center px-6 py-3 bg-white text-black text-lg cursor-pointer hover:bg-purple-50 motion-safe:transition-colors"
+                >
+                  Zur aktuellen Kunstedition
+                  <Icon
+                    name="tabler:sparkles"
+                    class="inline-block ms-1"
+                    aria-hidden="true"
+                  />
+                </a>
                 <a
                   href="https://fragdenstaat.de/newsletter/?pk_campaign=000000"
-                  class="inline-flex w-auto items-center px-6 py-3 bg-white text-black text-lg cursor-pointer hover:bg-purple-50 motion-safe:transition-colors"
+                  class="inline-flex w-auto items-center px-6 py-3 bg-stone-600 text-white text-lg cursor-pointer hover:bg-stone-500 motion-safe:transition-colors"
                 >
                   Newsletter abonnieren
                   <Icon
