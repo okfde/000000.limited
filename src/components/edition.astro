@@ -112,7 +112,7 @@ const prevEdition = editions.find((e) => e.data.year === edition.year - 1);
             <Markdown of={edition.description} />
           </div>
           <p class="text-stone-300 text-sm mb-8">
-            Giclée-Druck, mattes Papier, 30&times;40cm, gerahmt. Limitiert auf
+            Giclée-Druck, mattes Papier, 30&times;40cm, ungerahmt. Limitiert auf
             50 Exemplare. {!edition.available ? 'Nicht mehr erhältlich.' : ''}
           </p>
           {
@@ -163,7 +163,15 @@ const prevEdition = editions.find((e) => e.data.year === edition.year - 1);
         'https://pretix.eu/fragdenstaat/shop/',
         null,
         null,
-        [{ item: `item_${orderBtn.dataset['item']}`, count: 1 }]
+        [
+          {
+            item: `item_${orderBtn.dataset['item']}`,
+            count: 1,
+          },
+        ],
+        null,
+        null,
+        true
       );
     });
 
