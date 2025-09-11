@@ -117,10 +117,10 @@ const prevEdition = editions.find((e) => e.data.year === edition.year - 1);
           </p>
           {
             edition.available ? (
-              <button
+              <a
+                href={`https://pretix.eu/fragdenstaat/shop/?category=221011#item-${edition.pretixId}-legend`}
+                target="_blank"
                 class="inline-flex w-auto items-center px-6 py-3 bg-white text-black text-lg cursor-pointer hover:bg-purple-50 transition-colors"
-                id="order-button"
-                data-item={edition.pretixId}
               >
                 Kunstedition bestellen
                 <Icon
@@ -128,7 +128,7 @@ const prevEdition = editions.find((e) => e.data.year === edition.year - 1);
                   class="inline-block ms-1"
                   aria-hidden="true"
                 />
-              </button>
+              </a>
             ) : undefined
           }
         </div>
@@ -157,24 +157,6 @@ const prevEdition = editions.find((e) => e.data.year === edition.year - 1);
 
 <script>
   document.addEventListener('astro:page-load', () => {
-    const orderBtn = document.querySelector<HTMLButtonElement>('#order-button');
-    orderBtn?.addEventListener('click', () => {
-      (window as any).PretixWidget.open(
-        'https://pretix.eu/fragdenstaat/shop/',
-        null,
-        null,
-        [
-          {
-            item: `item_${orderBtn.dataset['item']}`,
-            count: 1,
-          },
-        ],
-        null,
-        null,
-        true
-      );
-    });
-
     const infoBtn = document.querySelector<HTMLButtonElement>('#info-button');
     infoBtn?.addEventListener('click', () => {
       const overlay = document.querySelector<HTMLDivElement>('#info-overlay')!;
