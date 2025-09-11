@@ -1,0 +1,30 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/layout.astro';
+import Edition from '../components/edition.astro';
+
+const editions = await getCollection('editions');
+
+export async function getStaticPaths() {
+  const editions = await getCollection('editions');
+
+  return editions.map((e) => ({
+    params: { edition: `edition${e.id}` },
+  }));
+}
+
+const edition = editions.find(
+  (e) => e.data.id === Astro.params.edition.replace('edition', '')
+)!;
+---
+
+<Layout>
+  <Fragment slot="head">
+    <title>Edition {edition.data.year} – #00000</title>
+  </Fragment>
+
+  <Edition edition={edition.data} />
+
+  <script type="text/javascript" src="https://pretix.eu/widget/v2.en.js" async
+  ></script>
+</Layout>

@@ -1,0 +1,100 @@
+- year: 2024
+  id: "2024"
+  title: „Sachsen“-Edition
+  description: >
+    Seit Jahren ist Sachsen ein schwarzer Fleck auf der Landkarte der Transparenz. Das sollte sich 2023 ändern. Seitdem gilt das Sächsische Transparenzgesetz. Wir wollten wissen, wie gut Transparenz in Sachsen nun tatsächlich funktioniert und haben die Akte „Umsetzung des Transparenzgesetzes“ im Sächsischen Innenministerium angefragt.  
+  
+  
+    Die diesjährige limitierte Kunstedition zeigt einen Querschnitt der Dokumente, die wir auf [unsere Anfrage](https://fragdenstaat.de/anfrage/akte-4-0127-161-1/) erhalten haben. Es sind rund 180 Seiten – jedoch fast komplett geschwärzt. Das einzige, was wir lesen dürfen: Unsere eigene Anfrage nach dieser Akte, die ordnungsgemäß dort einsortiert wurde.
+  available: false
+  images:
+    - file: "../assets/editions/edition2024.jpg"
+      alt: "Eine viele Seiten umfassende Akte, die fast komplett geschwärzt ist. Nur die Anfrage von FragDenStaat zur Akte selbst ist ungeschwärzt."
+- year: 2023
+  id: "2023"
+  title: „Lage“-Edition
+  description: >
+    Eigentlich garantieren Informationsfreiheitsgesetze den Zugang zu Informationen. Der diesjährige Ausschnitt für unsere limitierte Kunstedition zeigt, wie schnell damit Schluss ist – und kunstvoll, unironisch geschwärzt wird.
+
+    
+    Das Dokument ist der Lagebericht für Nigeria des Auswärtigen Amts aus 2022, den wir im Rahmen unserer Kampagne „Wie ist die Lage?“ gemeinsam mit ProAsyl befreien konnten. Es beschreibt eigentlich die Lage in Nigeria, wurde aber zu großen Teilen geschwärzt. [Wir haben deswegen das Auswärtige Amt verklagt.](https://fragdenstaat.de/blog/2023/09/28/lage-der-transparenz/)
+  available: false
+  images:
+    - file: "../assets/editions/edition2023.jpg"
+      alt: "„Das Gesetz zur Informationsfreiheit garantiert jeder Person das Recht, auf Antrag Zugang zu amtlichen Informationen durch die Behörden zu erhalten. [Geschwärzt]“"
+- year: 2022
+  id: "2022"
+  title: „Klima“-Edition
+  description: >
+    „Please consider the environment before printing this email.“ – dieser Hinweis wurde nicht geschwärzt. Die restliche Seite allerdings schon. Danke, liebes Bundesministerium für Digitales und Verkehr, dass Sie uns dies dennoch im Namen der Informationsfreiheit ausgedruckt zugesandt haben.
+
+
+    Die Seite ist aus [unserer Recherche, die zeigt, wie der US-Tech-Riese seit Jahren darum kämpft, seine Autopilot-Technik in Deutschland auf die Straße zu bekommen](https://fragdenstaat.de/blog/2022/09/28/so-gefahrlich-ist-teslas-autopilot/). Trotz verheerender Einschätzungen von Sachverständigen.
+
+    Was man im Verkehrsministerium über neue Systeme von Tesla denkt, bleibt allerdings unter schwarzen Balken verborgen. Nichtsdestotrotz wollten wir diese geschwärzte Kreation zur FragDenStaat-Kunstedition 2022 küren. Die limitierte „Klima“-Edition 2022 besteht aus 50 Kunstdrucken einer E-Mail von Unbekannt.
+  available: false
+  images:
+    - file: "../assets/editions/edition2022.jpg"
+      alt: "„[Langer, komplett geschwärzter Absatz] Please consider the environment before printing this email.“"
+- year: 2021
+  id: "2021"
+  title: „Philosophy“-Edition
+  description: >
+    Wer bin ich und wenn ja wie viele? Das Bundeskriminalamt stellt sich im Rahmen der Grenzpolitik existenzielle Fragen. Die Behörde präsentierte auf einer Lobby-Konferenz der europäischen Grenzpolizei Frontex Überlegungen zum Morphen von Gesichtern, die sie schnell [zu grundsätzlichen Fragen führte](https://fragdenstaat.de/dokumente/8224-ts2_3/).
+    
+    Die schönen Folien wurden Teil unserer Recherche zu Frontex, die wir im Frühjahr als „[Frontex Files](https://fragdenstaat.de/blog/2021/02/05/frontex-files/)“ veröffentlichten – und jetzt zu einer unserer Kunsteditionen.
+  available: true
+  pretixId: "807772"
+  images:
+    - file: "../assets/editions/edition2021.jpg"
+      alt: "Folie des Bundeskriminalamts mit der Überschrift „Who am I? And if yes, how many?“. Darunter ist nur ein großes schwarzes Rechteck zu sehen."
+- year: 2020
+  id: "2020"
+  title: „Corona“-Edition
+  description: >
+    Kaum ein netzpolitisches Thema hat dieses Jahr so stark die öffentliche Debatte geprägt wie die Corona-Warn-App. Die Bundesregierung hat hier endlich erstmals eine dezentrale Datenspeicherung und einen Open Source-Quellcode umgesetzt. Im Gegensatz dazu bietet [der Vertrag](https://fragdenstaat.de/anfrage/vertrag-corona-app-deutsche-telekom-und-sap/513616/anhang/Vertrag%20SAP.pdf) zwischen dem Gesundheitsministerium und SAP weitaus weniger Einblick. Ausgerechnet eine Passage zu Urheberrecht und Open Source schwärzte das Ministerium. Ob es die Ironie dabei begriff oder nicht – es qualifizierte sich damit für unsere Kunstedition 2020.
+  available: false
+  images:
+    - file: "../assets/editions/edition2020.jpg"
+      alt: "„8. Rechte an geistigem Eigentum; Open Source [geschwärzter Absatz]“"
+- year: 2019
+  id: "2019"
+  title: „Lyrik“-Edition
+  description: >
+    Die Vorlagen der Edition sind Antworten des schleswig-holsteinischen Bildungsministeriums auf Anfragen nach Deutsch-Abituraufgaben im Rahmen unserer [Kampagne FragSieAbi](http://fragdenstaat.de/kampagnen/frag-sie-abi/app/schleswig-holstein/). Das Ministerium schwärzte die in den Aufgaben enthaltenen Gedichte aus Urheberrechtsgründen, obwohl diese schon längst gemeinfrei sind.
+  available: false
+  images:
+    - file: "../assets/editions/edition2019-1.jpg"
+      alt: "Johann Wolfgang von Goethe: Reisezehrung. „Entwöhnen [geschwärzt] die Liebe.“"
+    - file: "../assets/editions/edition2019-2.jpg"
+      alt: "Bertholt Brecht: Schlechte Zeit für Lyrik. „Ich weiß doch: [geschwärzt] Schreibtisch.“"
+    - file: "../assets/editions/edition2019-3.jpg"
+      alt: "Joesph von Eichendorff: Die Nacht. „Wie schön, [geschwärzt] Wald.“"
+- year: 2018
+  id: "2018"
+  title: „Migrants“-Edition
+  description: >
+    Die Vorlage der Edition ist eine Antwort der EU-Grenzagentur Frontex [auf eine Anfrage zu seiner Mittelmeeroperation](https://www.asktheeu.org/en/request/jo_epn_triton_biweekly_analytica).
+  available: true
+  pretixId: "808070"
+  images:
+    - file: "../assets/editions/edition2018.jpg"
+      alt: "„In the period under considerations (weeks 21-22), [geschwärzt] migrants were [geschwärzt] migrants [geschwärzt] with the migrants [geschwärzt]“"
+- year: 2017
+  id: "2017"
+  title: „Fake News“-Edition
+  description: >
+    Die Vorlage der Edition ist eine Antwort der EU-Kommission auf eine [Anfrage zu sogenannten Fake News](https://www.asktheeu.org/en/request/concepts_against_fake_news?nocache=incoming-13625#incoming-13625).
+  available: false
+  images:
+    - file: "../assets/editions/edition2017.jpg"
+      alt: "„[geschwärzt] It is essential to avoid either government or private forms of censorship or ‘Ministries of Truth’ [geschwärzt]“"
+- year: 2016
+  id: "2016"
+  title: „Volkswagen“-Edition
+  description: >
+    Die Vorlage der Edition ist eine Antwort des Bundeswirtschaftsministeriums auf [eine Anfrage im Zusammenhang mit Volkswagen](https://fragdenstaat.de/anfrage/dokumente-zu-abgasskandal/) und anderen Autokonzernen.
+  available: false
+  images:
+    - file: "../assets/editions/edition2016.jpg"
+      alt: "Großes schwarzes Rechteck, das fast die gesamte A4-Seite ausfüllt. Darunter ein kleines schwarzes Rechteck. Darunter steht: „IFG § UIG AZ 440478 / 34“"

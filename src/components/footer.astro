@@ -1,0 +1,39 @@
+---
+import fragdenstaat from '../assets/fragdenstaat.svg';
+---
+
+<footer
+  class="mt-auto text-stone-700 bg-stone-50 py-4 px-8 flex max-md:flex-col items-center md:items-end"
+>
+  <h2 class="sr-only">Ein Projekt von FragDenStaat</h2>
+
+  <nav class="w-full">
+    <ul
+      class="flex flex-wrap items-center md:items-end flex-col md:flex-row gap-x-6 gap-y-2 max-md:mt-4 text-sm"
+    >
+      <li>
+        <a href="https://fragdenstaat.de/?pk_campaign=000000" target="_blank">
+          <img
+            src={fragdenstaat.src}
+            alt="FragDenStaat"
+            class="inline h-6 ms-2"
+          />
+        </a>
+      </li>
+      <li class="max-md:mt-4 md:ms-auto">
+        <a class="hover:underline" href="/overview">Über das Projekt</a>
+      </li>
+      <li>
+        <a class="hover:underline" href="https://fragdenstaat.de/spenden">
+          Spenden
+        </a>
+      </li>
+      <li>
+        <a class="hover:underline" href="/impressum"> Impressum </a>
+      </li>
+      <li>
+        <a class="hover:underline" href="/datenschutz"> Datenschutz </a>
+      </li>
+    </ul>
+  </nav>
+</footer>

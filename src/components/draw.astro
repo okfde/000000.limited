@@ -1,0 +1,80 @@
+<canvas
+  id="draw"
+  class="absolute inset-0"
+  width="0"
+  height="0"
+  aria-hidden="true"></canvas>
+
+<script>
+  document.addEventListener('DOMContentLoaded', register);
+  document.addEventListener('astro:page-load', register);
+
+  function register() {
+    const canvas = document.querySelector<HTMLCanvasElement>('#draw')!;
+
+    canvas.parentElement!.addEventListener('click', () => {
+      resize();
+
+      window.addEventListener('resize', resize);
+      canvas.addEventListener('mouseover', start);
+      canvas.addEventListener('mousemove', move);
+      canvas.addEventListener('mouseout', stop);
+
+      canvas.addEventListener('touchstart', start);
+      canvas.addEventListener('touchmove', move);
+      canvas.addEventListener('touchend', stop);
+    });
+
+    const ctx = canvas.getContext('2d')!;
+    let paint = false;
+
+    function resize() {
+      ctx.canvas.width = canvas.parentElement!.clientWidth;
+      ctx.canvas.height = canvas.parentElement!.clientHeight;
+    }
+
+    const lineWidth = 20;
+    const color = '#222';
+
+    function start() {
+      paint = true;
+      ctx.beginPath();
+    }
+
+    function move(event: TouchEvent | MouseEvent) {
+      if (paint) {
+        let mousePos = getCoords(event);
+
+        ctx.lineCap = 'round';
+        ctx.lineWidth = lineWidth;
+        ctx.strokeStyle = color;
+        ctx.moveTo(mousePos.x, mousePos.y);
+
+        ctx.lineTo(mousePos.x, mousePos.y);
+
+        mousePos = getCoords(event);
+
+        ctx.lineTo(mousePos.x, mousePos.y);
+        ctx.stroke();
+      }
+    }
+
+    function stop() {
+      paint = false;
+    }
+
+    function getCoords(event: MouseEvent | TouchEvent) {
+      const clientX =
+        (event as MouseEvent).clientX ||
+        (event as TouchEvent).touches[0].clientX;
+      const clientY =
+        (event as MouseEvent).clientY ||
+        (event as TouchEvent).touches[0].clientY;
+      const rect = canvas.getBoundingClientRect();
+      const x = clientX - rect.x;
+      const y = clientY - rect.y;
+
+      return { x, y };
+    }
+  }
+</script>

@@ -1,0 +1,73 @@
+---
+import type { Edition } from '../content.config';
+import Draw from './draw.astro';
+
+interface Props {
+  edition: Edition;
+  size?: 'sm' | 'lg';
+}
+
+const { edition } = Astro.props;
+---
+
+<div
+  class="shadow-lg md:shadow-xl shadow-stone-600/50 inline-block frame-container max-w-full"
+  transition:name={`frame-${Astro.props.edition.id}`}
+>
+  <div
+    class={`edition-images relative border-12 aspect-[3/4] border-stone-600 border-l-stone-800 border-t-stone-800 bg-white flex items-center justify-center inset-shadow-sm inset-shadow-stone-500 transform-3d backface-hidden ${Astro.props.size === 'sm' ? 'h-full w-full max-h-92' : 'lg:border-24 w-full lg:h-screen max-h-[50vh] lg:max-h-[85vh]'}`}
+  >
+    {
+      edition.images.map((image, i) => (
+        <img
+          src={image.file.src}
+          alt={image.alt}
+          class={`h-full w-full object-contain mix-blend-darken ${i === 0 ? 'inline-block' : 'hidden'}`}
+        />
+      ))
+    }
+    <Draw />
+    <div
+      class="absolute inset-0 px-4 text-center bg-stone-600/80 backdrop-blur-xs flex flex-col items-center justify-center gap-2 text-white motion-safe:transition-opacity opacity-0 pointer-events-none"
+      id="info-overlay"
+    >
+      {edition.images.map((i) => <p>{i.alt}</p>)}
+    </div>
+  </div>
+</div>
+
+<script>
+  let interval: any;
+
+  function setupRotation() {
+    document
+      .querySelectorAll<HTMLDivElement>('.frame-container')
+      .forEach((container) => {
+        const images = container.querySelectorAll<HTMLImageElement>(
+          '.edition-images img'
+        );
+
+        if (images.length > 0) {
+          let currentIndex = 0;
+
+          function showImage(index: number) {
+            images.forEach((img, i) => {
+              img.style.display = i === index ? 'inline-block' : 'none';
+            });
+          }
+
+          showImage(currentIndex);
+
+          interval = setInterval(() => {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+          }, 5000);
+        }
+      });
+  }
+
+  document.addEventListener('astro:page-load', () => {
+    clearInterval(interval);
+    setupRotation();
+  });
+</script>

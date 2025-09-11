@@ -1,0 +1,33 @@
+---
+import { Icon } from 'astro-icon/components';
+import Footer from '../components/footer.astro';
+import Layout from './layout.astro';
+
+const { frontmatter } = Astro.props;
+---
+
+<Layout>
+  <Fragment slot="head">
+    <title>{frontmatter.title} – #00000</title>
+  </Fragment>
+
+  <main class="flex justify-center mb-8">
+    <div class="max-w-[80ch] px-4 md:px-8">
+      <div class="py-8 mb-8">
+        <a href="/" class="text-purple-700">
+          <Icon
+            name="tabler:arrow-narrow-left"
+            class="inline-block"
+            aria-hidden="true"
+          />
+          Zur Startseite
+        </a>
+      </div>
+      <div class="prose">
+        <slot />
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

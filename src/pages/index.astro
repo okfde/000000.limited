@@ -1,0 +1,19 @@
+---
+import { getCollection } from 'astro:content';
+import Edition from '../components/edition.astro';
+import Layout from '../layouts/layout.astro';
+
+const editions = await getCollection('editions');
+const currentEdition = editions[0].data;
+---
+
+<Layout>
+  <Fragment slot="head">
+    <title>Edition {currentEdition.year} – #00000</title>
+    <link
+      rel="canonical"
+      href={`https://000000.limited/edition${currentEdition.id}`}
+    />
+  </Fragment>
+  <Edition edition={currentEdition} />
+</Layout>

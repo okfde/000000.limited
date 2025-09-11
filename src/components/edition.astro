@@ -1,0 +1,179 @@
+---
+import { Icon } from 'astro-icon/components';
+import { Markdown } from '@astropub/md';
+import type { Edition } from '../content.config';
+import { getCollection } from 'astro:content';
+import Frame from './frame.astro';
+import Footer from './footer.astro';
+
+const editions = await getCollection('editions');
+
+interface Props {
+  edition: Edition;
+}
+
+const edition = Astro.props.edition;
+const nextEdition = editions.find((e) => e.data.year === edition.year + 1);
+const prevEdition = editions.find((e) => e.data.year === edition.year - 1);
+---
+
+<main class="min-h-screen flex flex-col md:grid lg:grid-cols-2">
+  <h1 class="sr-only">Geschwärzte Kunst</h1>
+  <div class="sticky top-0 lg:h-screen flex flex-col md:justify-center">
+    <div class="p-4 flex items-center justify-center relative">
+      <Frame edition={edition} />
+    </div>
+
+    <nav class="flex justify-center py-4" transition:animate="fade">
+      <ul
+        class="rounded-full overflow-clip inline-flex divide-x divide-stone-500"
+      >
+        {
+          prevEdition ? (
+            <a
+              href={`/edition${prevEdition.data.year}`}
+              class="flex items-center justify-center py-2 px-4 bg-stone-600 text-white shadow-lg hover:bg-stone-500 motion-safe:transition-colors"
+              data-direction="backwards"
+            >
+              <Icon
+                name="tabler:arrow-narrow-left"
+                class="inline-block me-1"
+                aria-hidden="true"
+              />
+              {prevEdition.data.year}
+            </a>
+          ) : null
+        }
+
+        <a
+          href="/overview"
+          class="flex items-center justify-center py-2 px-4 bg-stone-600 text-white hover:bg-stone-500 motion-safe:transition-colors"
+          title="Übersicht aller Kunsteditionen"
+        >
+          <Icon
+            name="tabler:layout-grid"
+            class="inline-block"
+            aria-hidden="true"
+          />
+          <span class="sr-only">Alle Kunsteditionen</span>
+        </a>
+
+        <button
+          class="flex items-center justify-center py-2 px-4 bg-stone-600 text-white hover:bg-stone-500 motion-safe:transition-colors cursor-pointer"
+          id="info-button"
+          aria-hidden="true"
+          title="Bildbeschreibung anzeigen"
+        >
+          <Icon
+            name="tabler:info-circle"
+            class="inline-block"
+            aria-hidden="true"
+          />
+        </button>
+
+        {
+          nextEdition ? (
+            <a
+              href={`/edition${nextEdition.data.year}`}
+              class="flex items-center justify-center py-2 px-4 bg-stone-600 text-white shadow-lg hover:bg-stone-500 motion-safe:transition-colors ms-auto"
+              data-direction="forwards"
+            >
+              {nextEdition.data.year}
+              <Icon
+                name="tabler:arrow-narrow-right"
+                class="inline-block ms-1"
+                aria-hidden="true"
+              />
+            </a>
+          ) : null
+        }
+      </ul>
+    </nav>
+  </div>
+
+  <div
+    class="flex flex-1 flex-col bg-black max-lg:border-t-4 border-t-purple-300 z-10 max-md:mt-auto"
+  >
+    <div
+      class="flex flex-1 flex-col justify-center px-8 py-8 lg:px-16 w-full"
+      transition:animate="fade"
+    >
+      <div>
+        <p class="text-stone-300">{edition.year}</p>
+        <h2 class="text-4xl md:text-6xl font-extrabold text-white mt-4">
+          {edition.title}
+        </h2>
+        <div class="description my-6 md:my-12">
+          <Markdown of={edition.description} />
+        </div>
+        <p class="text-stone-300 text-sm mb-8">
+          Giclée-Druck, mattes Papier, 30&times;40cm, gerahmt. Limitiert auf 50
+          Exemplare. {!edition.available ? 'Nicht mehr erhältlich.' : ''}
+        </p>
+        {
+          edition.available ? (
+            <button
+              class="inline-flex w-auto items-center px-6 py-3 bg-white text-black text-lg cursor-pointer hover:bg-purple-50 transition-colors"
+              id="order-button"
+              data-item={edition.pretixId}
+            >
+              Kunstedition bestellen
+              <Icon
+                name="tabler:arrow-narrow-right"
+                class="inline-block ms-1"
+                aria-hidden="true"
+              />
+            </button>
+          ) : undefined
+        }
+      </div>
+    </div>
+
+    <Footer />
+  </div>
+
+  <style>
+    @reference "../styles/global.css";
+
+    .description {
+      @apply max-w-[80ch] text-lg md:text-xl text-stone-100;
+    }
+
+    .description :global(p) {
+      @apply mb-4;
+    }
+
+    .description :global(a) {
+      @apply text-purple-300 underline underline-offset-3 hover:no-underline;
+    }
+  </style>
+
+  <script>
+    document.addEventListener('astro:page-load', () => {
+      const orderBtn =
+        document.querySelector<HTMLButtonElement>('#order-button');
+      orderBtn?.addEventListener('click', () => {
+        (window as any).PretixWidget.open(
+          'https://pretix.eu/fragdenstaat/shop/',
+          null,
+          null,
+          [{ item: `item_${orderBtn.dataset['item']}`, count: 1 }]
+        );
+      });
+
+      const infoBtn = document.querySelector<HTMLButtonElement>('#info-button');
+      infoBtn?.addEventListener('click', () => {
+        const overlay =
+          document.querySelector<HTMLDivElement>('#info-overlay')!;
+
+        overlay.classList.toggle('opacity-0');
+        overlay.classList.toggle('opacity-100');
+        overlay.classList.toggle('pointer-events-auto');
+        overlay.classList.toggle('pointer-events-none');
+
+        infoBtn.classList.toggle('bg-stone-500');
+        infoBtn.classList.toggle('bg-stone-600');
+      });
+    });
+  </script>
+</main>
