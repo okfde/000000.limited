@@ -57,10 +57,11 @@ const prevEdition = editions.find((e) => e.data.year === edition.year - 1);
           >
             <Icon
               name="tabler:layout-grid"
-              class="inline-block"
+              class="inline-block me-2"
               aria-hidden="true"
             />
-            <span class="sr-only">Alle Kunsteditionen</span>
+            <span class="sr-only">Übersicht aller Kunsteditionen</span>
+            <span class="max-md:hidden" aria-hidden="true">Übersicht</span>
           </a>
 
           <button
@@ -71,9 +72,10 @@ const prevEdition = editions.find((e) => e.data.year === edition.year - 1);
           >
             <Icon
               name="tabler:info-circle"
-              class="inline-block"
+              class="inline-block me-2"
               aria-hidden="true"
             />
+            <span class="max-md:hidden">Bildbeschreibung</span>
           </button>
 
           {
@@ -113,13 +115,15 @@ const prevEdition = editions.find((e) => e.data.year === edition.year - 1);
           </div>
           <p class="text-stone-300 text-sm mb-8">
             Giclée-Druck, mattes Papier, 30&times;40cm, ungerahmt. Limitiert auf
-            50 Exemplare. {!edition.available ? 'Nicht mehr erhältlich.' : ''}
+            50 Exemplare.
           </p>
           {
             edition.available ? (
               <a
                 href={`https://pretix.eu/fragdenstaat/shop/?category=221011#item-${edition.pretixId}-legend`}
                 target="_blank"
+                id="buy-button"
+                data-year={edition.year}
                 class="inline-flex w-auto items-center px-6 py-3 bg-white text-black text-lg cursor-pointer hover:bg-purple-50 transition-colors"
               >
                 Kunstedition bestellen
@@ -129,7 +133,19 @@ const prevEdition = editions.find((e) => e.data.year === edition.year - 1);
                   aria-hidden="true"
                 />
               </a>
-            ) : undefined
+            ) : (
+              <button
+                class="inline-flex w-auto items-center px-6 py-3 bg-gray-300 text-black text-lg"
+                disabled
+              >
+                Nicht mehr erhältlich
+                <Icon
+                  name="tabler:mood-wrrr"
+                  class="inline-block ms-1"
+                  aria-hidden="true"
+                />
+              </button>
+            )
           }
         </div>
       </div>
@@ -168,6 +184,16 @@ const prevEdition = editions.find((e) => e.data.year === edition.year - 1);
 
       infoBtn.classList.toggle('bg-stone-500');
       infoBtn.classList.toggle('bg-stone-600');
+    });
+
+    const buyBtn = document.querySelector<HTMLAnchorElement>('#buy-button');
+    buyBtn?.addEventListener('click', () => {
+      window._paq?.push([
+        'trackEvent',
+        'events',
+        'order',
+        buyBtn.dataset.year!,
+      ]);
     });
   });
 </script>

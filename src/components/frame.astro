@@ -1,4 +1,5 @@
 ---
+import { Picture } from 'astro:assets';
 import type { Edition } from '../content.config';
 import Draw from './draw.astro';
 
@@ -11,18 +12,33 @@ const { edition } = Astro.props;
 ---
 
 <div
-  class="shadow-lg md:shadow-xl shadow-stone-600/50 inline-block frame-container max-w-full"
+  class:list={[
+    'shadow-lg md:shadow-xl shadow-stone-600/50 inline-block frame-container max-w-full',
+    Astro.props.size === 'sm' ? 'w-full' : '',
+  ]}
   transition:name={`frame-${Astro.props.edition.id}`}
 >
   <div
-    class={`edition-images relative border-12 aspect-[3/4] border-stone-600 border-l-stone-800 border-t-stone-800 bg-white flex items-center justify-center inset-shadow-sm inset-shadow-stone-500 transform-3d backface-hidden ${Astro.props.size === 'sm' ? 'h-full w-full max-h-92' : 'lg:border-24 w-full lg:h-screen max-h-[50vh] lg:max-h-[85vh]'}`}
+    class:list={[
+      'edition-images relative border-12 aspect-[3/4] border-stone-600 border-l-stone-800 border-t-stone-800 bg-white',
+      'flex items-center justify-center inset-shadow-sm inset-shadow-stone-500 transform-3d backface-hidden',
+      Astro.props.size === 'sm'
+        ? 'w-full md:max-h-92'
+        : 'lg:border-24 w-full lg:h-screen max-h-[50vh] lg:max-h-[85vh]',
+    ]}
   >
     {
       edition.images.map((image, i) => (
-        <img
-          src={image.file.src}
+        <Picture
+          src={image.file}
           alt={image.alt}
-          class={`h-full w-full object-contain mix-blend-darken ${i === 0 ? 'inline-block' : 'hidden'}`}
+          class:list={[
+            'w-full h-full object-contain mix-blend-darken',
+            i === 0 ? 'block' : 'hidden',
+          ]}
+          formats={['avif']}
+          pictureAttributes={{ class: 'contents' }}
+          loading={'eager'}
         />
       ))
     }
@@ -52,7 +68,7 @@ const { edition } = Astro.props;
 
           function showImage(index: number) {
             images.forEach((img, i) => {
-              img.style.display = i === index ? 'inline-block' : 'none';
+              img.style.display = i === index ? 'block' : 'none';
             });
           }
 

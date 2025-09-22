@@ -61,14 +61,15 @@ const editions = (await getCollection('editions')).map((e) => e.data);
         </section>
         <section class="flex justify-center">
           <ul
-            class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-8 p-4 md:p-8"
+            class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 p-4 md:p-8 w-full max-w-256"
           >
             {
               editions.map((edition) => (
-                <li>
+                <li class="w-full flex justify-center">
                   <a
                     href={`/edition${edition.year}/`}
                     title={`${edition.year.toString()}: ${edition.title}`}
+                    class="w-full"
                   >
                     <Frame edition={edition} size="sm" />
                     <span class="sr-only">{edition.title}</span>
