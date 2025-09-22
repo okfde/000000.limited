@@ -12,7 +12,7 @@
   function register() {
     const canvas = document.querySelector<HTMLCanvasElement>('#draw')!;
 
-    canvas.parentElement!.addEventListener('click', () => {
+    canvas.parentElement!.addEventListener('dblclick', () => {
       resize();
 
       window.addEventListener('resize', resize);
