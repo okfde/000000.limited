@@ -71,7 +71,7 @@ const editions = (await getCollection('editions')).map((e) => e.data);
                     title={`${edition.year.toString()}: ${edition.title}`}
                     class="w-full"
                   >
-                    <Frame edition={edition} size="sm" />
+                    <Frame edition={edition} preview />
                     <span class="sr-only">{edition.title}</span>
                   </a>
                 </li>
