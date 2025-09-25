@@ -1,33 +1,33 @@
 ---
-import { getCollection } from 'astro:content';
-import Layout from '../layouts/layout.astro';
-import Frame from '../components/frame.astro';
-import Footer from '../components/footer.astro';
-import { Icon } from 'astro-icon/components';
+import { getCollection } from "astro:content";
+import Layout from "../layouts/layout.astro";
+import Frame from "../components/frame.astro";
+import Footer from "../components/footer.astro";
+import { Icon } from "astro-icon/components";
 
-const editions = (await getCollection('editions')).map((e) => e.data);
+const editions = (await getCollection("editions")).map((e) => e.data);
 ---
 
 <Layout>
   <Fragment slot="head">
     <title>Geschwärzte Kunst – #00000</title>
   </Fragment>
-  <div class="min-h-screen flex flex-col">
-    <main class="flex-1 flex">
-      <div class="w-full flex flex-col md:grid md:grid-cols-2 relative">
+  <div class="flex min-h-screen flex-col">
+    <main class="flex flex-1">
+      <div class="relative flex w-full flex-col md:grid md:grid-cols-2">
         <section class="bg-black md:order-2">
           <div
-            class="sticky top-8 flex flex-1 flex-col px-4 md:px-8 py-8 lg:px-16 w-full lg:h-screen lg:justify-center"
+            class="sticky top-8 flex w-full flex-1 flex-col px-4 py-8 md:px-8 lg:h-screen lg:justify-center lg:px-16"
           >
             <div class="space-y-4 md:space-y-8">
-              <h1 class="text-4xl lg:text-6xl font-extrabold text-white">
+              <h1 class="text-4xl font-extrabold text-white lg:text-6xl">
                 Geschwärzte Kunst
               </h1>
-              <p class="max-w-[80ch] text-lg md:text-xl text-stone-100">
+              <p class="max-w-[80ch] text-lg text-stone-100 md:text-xl">
                 Am 28.09. feiern wir den Tag der Informationsfreiheit – und seit
                 2016 gibt es dazu jedes Jahr eine neue limitierte Kunstedition.
               </p>
-              <p class="max-w-[80ch] text-lg md:text-xl text-stone-100">
+              <p class="max-w-[80ch] text-lg text-stone-100 md:text-xl">
                 Richtig schwärzen ist eine Kunst. Das zeigen Behörden immer
                 wieder, wenn sie uns Informationen vorenthalten wollen. Die
                 schönsten Exemplare werden jedes Jahr zu einer Kunstedition.
@@ -35,23 +35,23 @@ const editions = (await getCollection('editions')).map((e) => e.data);
               <div class="flex flex-wrap gap-4">
                 <a
                   href={`/edition${editions[0].id}/`}
-                  class="inline-flex w-auto items-center px-6 py-3 bg-white text-black text-lg cursor-pointer hover:bg-purple-50 motion-safe:transition-colors"
+                  class="inline-flex w-auto cursor-pointer items-center bg-white px-6 py-3 text-lg text-black hover:bg-purple-50 motion-safe:transition-colors"
                 >
                   Zur aktuellen Kunstedition
                   <Icon
                     name="tabler:sparkles"
-                    class="inline-block ms-1"
+                    class="ms-1 inline-block"
                     aria-hidden="true"
                   />
                 </a>
                 <a
                   href="https://fragdenstaat.de/newsletter/?pk_campaign=000000"
-                  class="inline-flex w-auto items-center px-6 py-3 bg-stone-600 text-white text-lg cursor-pointer hover:bg-stone-500 motion-safe:transition-colors"
+                  class="inline-flex w-auto cursor-pointer items-center bg-stone-600 px-6 py-3 text-lg text-white hover:bg-stone-500 motion-safe:transition-colors"
                 >
                   Newsletter abonnieren
                   <Icon
                     name="tabler:arrow-narrow-right"
-                    class="inline-block ms-1"
+                    class="ms-1 inline-block"
                     aria-hidden="true"
                   />
                 </a>
@@ -61,11 +61,11 @@ const editions = (await getCollection('editions')).map((e) => e.data);
         </section>
         <section class="flex justify-center">
           <ul
-            class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 p-4 md:p-8 w-full max-w-256"
+            class="grid w-full max-w-256 grid-cols-2 gap-8 p-4 md:grid-cols-2 md:p-8 lg:grid-cols-3"
           >
             {
               editions.map((edition) => (
-                <li class="w-full flex justify-center">
+                <li class="flex w-full justify-center">
                   <a
                     href={`/edition${edition.year}/`}
                     title={`${edition.year.toString()}: ${edition.title}`}
@@ -82,7 +82,7 @@ const editions = (await getCollection('editions')).map((e) => e.data);
       </div>
     </main>
 
-    <div class="w-full lg:w-1/2 ms-auto">
+    <div class="ms-auto w-full lg:w-1/2">
       <Footer />
     </div>
   </div>

@@ -1,12 +1,12 @@
 ---
-import { Icon } from 'astro-icon/components';
-import { Markdown } from '@astropub/md';
-import type { Edition } from '../content.config';
-import { getCollection } from 'astro:content';
-import Frame from './frame.astro';
-import Footer from './footer.astro';
+import { Icon } from "astro-icon/components";
+import { Markdown } from "@astropub/md";
+import type { Edition } from "../content.config";
+import { getCollection } from "astro:content";
+import Frame from "./frame.astro";
+import Footer from "./footer.astro";
 
-const editions = await getCollection('editions');
+const editions = await getCollection("editions");
 
 interface Props {
   edition: Edition;
@@ -18,30 +18,30 @@ const prevEdition = editions.find((e) => e.data.year === edition.year - 1);
 ---
 
 <div
-  class="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-[minmax(auto,1fr)] lg:h-screen"
+  class="grid grid-cols-1 lg:h-screen lg:grid-cols-2 lg:grid-rows-[minmax(auto,1fr)]"
 >
   <main class="contents">
     <h1 class="sr-only">Geschwärzte Kunst</h1>
 
-    <div class="sticky top-0 flex flex-col md:justify-center row-span-2">
-      <div class="p-4 flex items-center justify-center relative">
+    <div class="sticky top-0 row-span-2 flex flex-col md:justify-center">
+      <div class="relative flex items-center justify-center p-4">
         <Frame edition={edition} />
       </div>
 
       <nav class="flex justify-center py-4" transition:animate="fade">
         <ul
-          class="rounded-full overflow-clip inline-flex divide-x divide-stone-500"
+          class="inline-flex divide-x divide-stone-500 overflow-clip rounded-full"
         >
           {
             prevEdition ? (
               <a
                 href={`/edition${prevEdition.data.year}/`}
-                class="flex items-center justify-center py-2 px-4 bg-stone-600 text-white shadow-lg hover:bg-stone-500 motion-safe:transition-colors"
+                class="flex items-center justify-center bg-stone-600 px-4 py-2 text-white shadow-lg hover:bg-stone-500 motion-safe:transition-colors"
                 data-astro-prefetch
               >
                 <Icon
                   name="tabler:arrow-narrow-left"
-                  class="inline-block me-1"
+                  class="me-1 inline-block"
                   aria-hidden="true"
                 />
                 {prevEdition.data.year}
@@ -51,7 +51,7 @@ const prevEdition = editions.find((e) => e.data.year === edition.year - 1);
 
           <a
             href="/"
-            class="flex items-center justify-center py-2 px-4 bg-stone-600 text-white hover:bg-stone-500 motion-safe:transition-colors"
+            class="flex items-center justify-center bg-stone-600 px-4 py-2 text-white hover:bg-stone-500 motion-safe:transition-colors"
             title="Übersicht aller Kunsteditionen"
             data-astro-prefetch
           >
@@ -65,7 +65,7 @@ const prevEdition = editions.find((e) => e.data.year === edition.year - 1);
           </a>
 
           <button
-            class="flex items-center justify-center py-2 px-4 bg-stone-600 text-white hover:bg-stone-500 motion-safe:transition-colors cursor-pointer"
+            class="flex cursor-pointer items-center justify-center bg-stone-600 px-4 py-2 text-white hover:bg-stone-500 motion-safe:transition-colors"
             id="info-button"
             aria-hidden="true"
             title="Bildbeschreibung anzeigen"
@@ -82,13 +82,13 @@ const prevEdition = editions.find((e) => e.data.year === edition.year - 1);
             nextEdition ? (
               <a
                 href={`/edition${nextEdition.data.year}/`}
-                class="flex items-center justify-center py-2 px-4 bg-stone-600 text-white shadow-lg hover:bg-stone-500 motion-safe:transition-colors ms-auto"
+                class="ms-auto flex items-center justify-center bg-stone-600 px-4 py-2 text-white shadow-lg hover:bg-stone-500 motion-safe:transition-colors"
                 data-astro-prefetch
               >
                 {nextEdition.data.year}
                 <Icon
                   name="tabler:arrow-narrow-right"
-                  class="inline-block ms-1"
+                  class="ms-1 inline-block"
                   aria-hidden="true"
                 />
               </a>
@@ -99,21 +99,21 @@ const prevEdition = editions.find((e) => e.data.year === edition.year - 1);
     </div>
 
     <div
-      class="flex flex-1 flex-col bg-black max-lg:border-t-4 border-t-purple-300 z-10 max-md:mt-auto"
+      class="z-10 flex flex-1 flex-col border-t-purple-300 bg-black max-lg:border-t-4 max-md:mt-auto"
     >
       <div
-        class="flex flex-1 flex-col justify-center px-8 py-8 lg:px-16 w-full"
+        class="flex w-full flex-1 flex-col justify-center px-8 py-8 lg:px-16"
         transition:animate="fade"
       >
         <div>
           <p class="text-stone-300">{edition.year}</p>
-          <h2 class="text-4xl md:text-6xl font-extrabold text-white mt-4">
+          <h2 class="mt-4 text-4xl font-extrabold text-white md:text-6xl">
             {edition.title}
           </h2>
           <div class="description my-6 md:my-12">
             <Markdown of={edition.description} />
           </div>
-          <p class="text-stone-300 text-sm mb-8">
+          <p class="mb-8 text-sm text-stone-300">
             Giclée-Druck, mattes Papier, 30&times;40cm, ungerahmt. Limitiert auf
             50 Exemplare.
           </p>
@@ -124,24 +124,24 @@ const prevEdition = editions.find((e) => e.data.year === edition.year - 1);
                 target="_blank"
                 id="buy-button"
                 data-year={edition.year}
-                class="inline-flex w-auto items-center px-6 py-3 bg-white text-black text-lg cursor-pointer hover:bg-purple-50 transition-colors"
+                class="inline-flex w-auto cursor-pointer items-center bg-white px-6 py-3 text-lg text-black transition-colors hover:bg-purple-50"
               >
                 Kunstedition bestellen
                 <Icon
                   name="tabler:arrow-narrow-right"
-                  class="inline-block ms-1"
+                  class="ms-1 inline-block"
                   aria-hidden="true"
                 />
               </a>
             ) : (
               <button
-                class="inline-flex w-auto items-center px-6 py-3 bg-gray-300 text-black text-lg"
+                class="inline-flex w-auto items-center bg-gray-300 px-6 py-3 text-lg text-black"
                 disabled
               >
                 Nicht mehr erhältlich
                 <Icon
                   name="tabler:mood-wrrr"
-                  class="inline-block ms-1"
+                  class="ms-1 inline-block"
                   aria-hidden="true"
                 />
               </button>
@@ -159,7 +159,7 @@ const prevEdition = editions.find((e) => e.data.year === edition.year - 1);
   @reference "../styles/global.css";
 
   .description {
-    @apply max-w-[80ch] text-lg md:text-xl text-stone-100;
+    @apply max-w-[80ch] text-lg text-stone-100 md:text-xl;
   }
 
   .description :global(p) {
@@ -172,26 +172,26 @@ const prevEdition = editions.find((e) => e.data.year === edition.year - 1);
 </style>
 
 <script>
-  document.addEventListener('astro:page-load', () => {
-    const infoBtn = document.querySelector<HTMLButtonElement>('#info-button');
-    infoBtn?.addEventListener('click', () => {
-      const overlay = document.querySelector<HTMLDivElement>('#info-overlay')!;
+  document.addEventListener("astro:page-load", () => {
+    const infoBtn = document.querySelector<HTMLButtonElement>("#info-button");
+    infoBtn?.addEventListener("click", () => {
+      const overlay = document.querySelector<HTMLDivElement>("#info-overlay")!;
 
-      overlay.classList.toggle('opacity-0');
-      overlay.classList.toggle('opacity-100');
-      overlay.classList.toggle('pointer-events-auto');
-      overlay.classList.toggle('pointer-events-none');
+      overlay.classList.toggle("opacity-0");
+      overlay.classList.toggle("opacity-100");
+      overlay.classList.toggle("pointer-events-auto");
+      overlay.classList.toggle("pointer-events-none");
 
-      infoBtn.classList.toggle('bg-stone-500');
-      infoBtn.classList.toggle('bg-stone-600');
+      infoBtn.classList.toggle("bg-stone-500");
+      infoBtn.classList.toggle("bg-stone-600");
     });
 
-    const buyBtn = document.querySelector<HTMLAnchorElement>('#buy-button');
-    buyBtn?.addEventListener('click', () => {
+    const buyBtn = document.querySelector<HTMLAnchorElement>("#buy-button");
+    buyBtn?.addEventListener("click", () => {
       window._paq?.push([
-        'trackEvent',
-        'events',
-        'order',
+        "trackEvent",
+        "events",
+        "order",
         buyBtn.dataset.year!,
       ]);
     });

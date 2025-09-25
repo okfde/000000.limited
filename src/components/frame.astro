@@ -1,7 +1,7 @@
 ---
-import { Picture } from 'astro:assets';
-import type { Edition } from '../content.config';
-import Draw from './draw.astro';
+import { Picture } from "astro:assets";
+import type { Edition } from "../content.config";
+import Draw from "./draw.astro";
 
 interface Props {
   edition: Edition;
@@ -13,18 +13,18 @@ const { edition, preview } = Astro.props;
 
 <div
   class:list={[
-    'frame-container inline-block max-w-full shadow-lg shadow-stone-600/50 md:shadow-xl',
-    preview ? 'w-full' : '',
+    "frame-container inline-block max-w-full shadow-lg shadow-stone-600/50 md:shadow-xl",
+    preview ? "w-full" : "",
   ]}
   transition:name={`frame-${edition.id}`}
 >
   <div
     class:list={[
-      'edition-images relative aspect-[3/4] border-12 border-stone-600 border-t-stone-800 border-l-stone-800 bg-white',
-      'flex items-center justify-center inset-shadow-sm inset-shadow-stone-500 backface-hidden transform-3d',
+      "edition-images relative aspect-[3/4] border-12 border-stone-600 border-t-stone-800 border-l-stone-800 bg-white",
+      "flex items-center justify-center inset-shadow-sm inset-shadow-stone-500 backface-hidden transform-3d",
       preview
-        ? 'w-full md:max-h-92'
-        : 'max-h-[50vh] w-full lg:h-screen lg:max-h-[85vh] lg:border-24',
+        ? "w-full md:max-h-92"
+        : "max-h-[50vh] w-full lg:h-screen lg:max-h-[85vh] lg:border-24",
     ]}
   >
     {
@@ -33,14 +33,14 @@ const { edition, preview } = Astro.props;
           src={image.file}
           alt={image.alt}
           class:list={[
-            'h-full w-full object-contain mix-blend-darken',
-            i === 0 ? 'block' : 'hidden',
+            "h-full w-full object-contain mix-blend-darken",
+            i === 0 ? "block" : "hidden",
           ]}
           widths={preview ? [320] : [320, 800]}
-          sizes={preview ? '320px' : '(max-width: 1000px) 320px, 800px'}
-          formats={['avif']}
-          pictureAttributes={{ class: 'contents' }}
-          loading={'eager'}
+          sizes={preview ? "320px" : "(max-width: 1000px) 320px, 800px"}
+          formats={["avif"]}
+          pictureAttributes={{ class: "contents" }}
+          loading={"eager"}
         />
       ))
     }
@@ -59,10 +59,10 @@ const { edition, preview } = Astro.props;
 
   function setupRotation() {
     document
-      .querySelectorAll<HTMLDivElement>('.frame-container')
+      .querySelectorAll<HTMLDivElement>(".frame-container")
       .forEach((container) => {
         const images = container.querySelectorAll<HTMLImageElement>(
-          '.edition-images img'
+          ".edition-images img",
         );
 
         if (images.length > 0) {
@@ -70,7 +70,7 @@ const { edition, preview } = Astro.props;
 
           function showImage(index: number) {
             images.forEach((img, i) => {
-              img.style.display = i === index ? 'block' : 'none';
+              img.style.display = i === index ? "block" : "none";
             });
           }
 
@@ -84,7 +84,7 @@ const { edition, preview } = Astro.props;
       });
   }
 
-  document.addEventListener('astro:page-load', () => {
+  document.addEventListener("astro:page-load", () => {
     clearInterval(interval);
     setupRotation();
   });

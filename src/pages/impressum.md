@@ -1,5 +1,5 @@
 ---
-layout: '../layouts/content.astro'
+layout: "../layouts/content.astro"
 title: Impressum
 ---
 
@@ -9,7 +9,7 @@ Open Knowledge Foundation Deutschland e.V.
 FragDenStaat  
 Singerstr. 109  
 10179 Berlin  
-[https://okfn.de](https://okfn.de/)  
+[https://okfn.de](https://okfn.de/)
 
 Mail: info@fragdenstaat.de
 

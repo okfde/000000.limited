@@ -1,7 +1,7 @@
 ---
-import '../styles/global.css';
-import { ClientRouter } from 'astro:transitions';
-import favicon from '../assets/favicon.svg';
+import "../styles/global.css";
+import { ClientRouter } from "astro:transitions";
+import favicon from "../assets/favicon.svg";
 ---
 
 <html lang="de">
@@ -22,19 +22,19 @@ import favicon from '../assets/favicon.svg';
 
     <script is:inline>
       var _paq = (window._paq = window._paq || []);
-      _paq.push(['setDoNotTrack', true]);
-      _paq.push(['disableCookies']);
-      _paq.push(['trackPageView']);
-      _paq.push(['enableLinkTracking']);
+      _paq.push(["setDoNotTrack", true]);
+      _paq.push(["disableCookies"]);
+      _paq.push(["trackPageView"]);
+      _paq.push(["enableLinkTracking"]);
       (function () {
-        var u = 'https://traffic.okfn.de/';
-        _paq.push(['setTrackerUrl', u + 'matomo.php']);
-        _paq.push(['setSiteId', '26']);
+        var u = "https://traffic.okfn.de/";
+        _paq.push(["setTrackerUrl", u + "matomo.php"]);
+        _paq.push(["setSiteId", "26"]);
         var d = document,
-          g = d.createElement('script'),
-          s = d.getElementsByTagName('script')[0];
+          g = d.createElement("script"),
+          s = d.getElementsByTagName("script")[0];
         g.async = true;
-        g.src = u + 'matomo.js';
+        g.src = u + "matomo.js";
         s.parentNode.insertBefore(g, s);
       })();
     </script>

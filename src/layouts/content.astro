@@ -1,7 +1,7 @@
 ---
-import { Icon } from 'astro-icon/components';
-import Footer from '../components/footer.astro';
-import Layout from './layout.astro';
+import { Icon } from "astro-icon/components";
+import Footer from "../components/footer.astro";
+import Layout from "./layout.astro";
 
 const { frontmatter } = Astro.props;
 ---
@@ -11,9 +11,9 @@ const { frontmatter } = Astro.props;
     <title>{frontmatter.title} – #00000</title>
   </Fragment>
 
-  <main class="flex justify-center mb-8">
+  <main class="mb-8 flex justify-center">
     <div class="max-w-[80ch] px-4 md:px-8">
-      <div class="py-8 mb-8">
+      <div class="mb-8 py-8">
         <a href="/" class="text-purple-700">
           <Icon
             name="tabler:arrow-narrow-left"

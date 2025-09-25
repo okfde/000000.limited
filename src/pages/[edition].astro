@@ -1,12 +1,12 @@
 ---
-import { getCollection } from 'astro:content';
-import Layout from '../layouts/layout.astro';
-import Edition from '../components/edition.astro';
+import { getCollection } from "astro:content";
+import Layout from "../layouts/layout.astro";
+import Edition from "../components/edition.astro";
 
-const editions = await getCollection('editions');
+const editions = await getCollection("editions");
 
 export async function getStaticPaths() {
-  const editions = await getCollection('editions');
+  const editions = await getCollection("editions");
 
   return editions.map((e) => ({
     params: { edition: `edition${e.id}` },
@@ -14,7 +14,7 @@ export async function getStaticPaths() {
 }
 
 const edition = editions.find(
-  (e) => e.data.id === Astro.params.edition.replace('edition', '')
+  (e) => e.data.id === Astro.params.edition.replace("edition", ""),
 )!;
 ---
 
