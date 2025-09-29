@@ -6,11 +6,7 @@ import Layout from "./layout.astro";
 const { frontmatter } = Astro.props;
 ---
 
-<Layout>
-  <Fragment slot="head">
-    <title>{frontmatter.title} – #00000</title>
-  </Fragment>
-
+<Layout title={frontmatter.title}>
   <main class="mb-8 flex justify-center">
     <div class="max-w-[80ch] px-4 md:px-8">
       <div class="mb-8 py-8">

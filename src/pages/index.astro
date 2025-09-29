@@ -8,10 +8,7 @@ import { Icon } from "astro-icon/components";
 const editions = (await getCollection("editions")).map((e) => e.data);
 ---
 
-<Layout>
-  <Fragment slot="head">
-    <title>Geschwärzte Kunst – #00000</title>
-  </Fragment>
+<Layout title="Geschwärzte Kunst">
   <div class="flex min-h-screen flex-col">
     <main class="flex flex-1">
       <div class="relative flex w-full flex-col md:grid md:grid-cols-2">

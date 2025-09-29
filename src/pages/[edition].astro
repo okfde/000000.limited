@@ -18,10 +18,6 @@ const edition = editions.find(
 )!;
 ---
 
-<Layout>
-  <Fragment slot="head">
-    <title>Edition {edition.data.year} – #00000</title>
-  </Fragment>
-
+<Layout title={`${edition.data.title} (${edition.data.year})`}>
   <Edition edition={edition.data} />
 </Layout>

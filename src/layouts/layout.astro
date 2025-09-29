@@ -2,6 +2,11 @@
 import "../styles/global.css";
 import { ClientRouter } from "astro:transitions";
 import favicon from "../assets/favicon.svg";
+import og from "../assets/og.png";
+
+interface Props {
+  title: string;
+}
 ---
 
 <html lang="de">
@@ -10,12 +15,21 @@ import favicon from "../assets/favicon.svg";
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href={favicon.src} type="image/svg+xml" />
     <ClientRouter />
-    <slot name="head" />
+    <title>{Astro.props.title} – #000000</title>
     <meta
       name="description"
       content="#000000 ist die limitierte Kunstedition zur Informationsfreiheit von FragDenStaat.
 "
     />
+    <meta property="og:title" content={Astro.props.title} />
+    <meta property="og:site_name" content="#000000" />
+    <meta property="og:image" content={og.src} />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:description"
+      content="#000000 ist die limitierte Kunstedition zur Informationsfreiheit von FragDenStaat."
+    />
+    <slot name="head" />
   </head>
   <body class="bg-stone-200">
     <slot />
