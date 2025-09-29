@@ -15,11 +15,11 @@ Mit dem Betrieb der „000000.limited“-Webseite mit der URL <https://000000.li
 
 Unsere Datenschutzbestimmungen enthalten Fachbegriffe, die in der DSGVO und dem BDSG stehen. Zu Ihrem besseren Verständnis wollen wir diese Begriffe in einfachen Worten vorab erklären:
 
-#### 2.1 Personenbezogene Daten
+#### Personenbezogene Daten
 
 „Personenbezogene Daten“ sind alle Informationen, die sich auf eine identifizierte oder identifizierbare Person beziehen ([Art. 4 Nr. 1 DSGVO](https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:02016R0679-20160504#id-10c28e5a-6d3f-4086-93e7-748c270d368b)). Angaben einer identifizierten Person können z. B. der Name oder die E-Mail-Adresse sein. Personenbezogen sind aber auch Daten, bei denen die Identität nicht unmittelbar ersichtlich ist, sich aber ermitteln lässt, indem man eigene oder fremde Informationen kombiniert und so erfährt um wen es sich handelt. Eine Person wird z. B. über die Angabe Ihrer Anschrift oder Bankverbindung, Ihres Geburtsdatums oder Benutzernamens, Ihrer IP-Adressen und/oder Standortdaten identifizierbar. Relevant sind hier alle Informationen, die in irgendeiner Weise einen Rückschluss auf eine Person zulassen.
 
-#### 2.2 Verarbeitung
+#### Verarbeitung
 
 Unter einer „Verarbeitung“ versteht [Art. 4 Nr. 2 DSGVO](https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:02016R0679-20160504#id-10c28e5a-6d3f-4086-93e7-748c270d368b) jeden Vorgang im Zusammenhang mit personenbezogenen Daten. Dies betrifft insbesondere das Erheben, das Erfassen, die Organisation, das Ordnen, die Speicherung, die Anpassung oder Veränderung, das Auslesen, das Abfragen, die Verwendung, die Offenlegung, Übermittlung, Verbreitung oder eine andere Form der Bereitstellung, den Abgleich oder die Verknüpfung, die Einschränkung, das Löschen oder die Vernichtung von personenbezogenen Daten.
 
@@ -29,15 +29,15 @@ Unter einer „Verarbeitung“ versteht [Art. 4 Nr. 2 DSGVO](https://eur-lex.eur
 
 Verantwortlich für die Datenverarbeitung ist:
 
-Verein: Open Knowledge Foundation Deutschland e.V. (Projekt FragDenStaat) („wir“)  
-Gesetzlicher Vertreter: Daniel Dietrich, Kristina Klein, Felix Reda, Lea Gimpel, Gabriele C. Klug, Stefan Heumann (Vorstand)  
-Anschrift: Singerstr. 109, 10179 Berlin  
-Fax: +49 30 978 942 30  
+Verein: Open Knowledge Foundation Deutschland e.V. (Projekt FragDenStaat) („wir“)
+Gesetzlicher Vertreter: Daniel Dietrich, Kristina Klein, Felix Reda, Lea Gimpel, Gabriele C. Klug, Stefan Heumann (Vorstand)
+Anschrift: Singerstr. 109, 10179 Berlin
+Fax: +49 30 978 942 30
 E-Mail: [info@fragdenstaat.de](mailto:info@fragdenstaat.de)
 
 ### Datenschutzbeauftragte
 
-Wir haben für unseren Verein eine externe Datenschutzbeauftragte bestellt. Sie erreichen sie unter:  
+Wir haben für unseren Verein eine externe Datenschutzbeauftragte bestellt. Sie erreichen sie unter:
 Name: Beata Hubrig
 
 E-Mail: [datenschutz@okfn.de](mailto:datenschutz@okfn.de)
@@ -46,7 +46,7 @@ E-Mail: [datenschutz@okfn.de](mailto:datenschutz@okfn.de)
 
 Verarbeitungsrahmen: 000000.LIMITED
 
-Im Rahmen unserer „000000.limited“-Webseite verarbeiten wir die nachfolgend im Abschnitt D. im Einzelnen aufgeführten personenbezogenen Daten von Ihnen. Wir verarbeiten nur Daten von Ihnen, die Sie aktiv auf unserer Webseite angeben oder die Sie bei der Nutzung unseres Angebotes automatisch zur Verfügung stellen. Die Seite stellt eine Präsentationswebseite unserer Kunstedition dar. Sofern Sie die Links auf der Webseite auf unseren Shop bzw. unser Spendenformular auf fragdenstaat.de, gelangen gilt für die dortigen Datenverarbeitungen die [Datenschutzerklärung von fragdenstaat.de](https://fragdenstaat.de/shop/datenschutzerklarung/).
+Im Rahmen unserer „000000.limited“-Webseite verarbeiten wir die nachfolgend im Einzelnen aufgeführten personenbezogenen Daten von Ihnen. Wir verarbeiten nur Daten von Ihnen, die Sie aktiv auf unserer Webseite angeben oder die Sie bei der Nutzung unseres Angebotes automatisch zur Verfügung stellen. Die Seite stellt eine Präsentationswebseite unserer Kunstedition dar. Sofern Sie die Links auf der Webseite auf unseren Shop bzw. unser Spendenformular auf fragdenstaat.de, gelangen gilt für die dortigen Datenverarbeitungen die [Datenschutzerklärung von fragdenstaat.de](https://fragdenstaat.de/shop/datenschutzerklarung/).
 
 1. Sofern wir uns bei der Verarbeitung Ihrer personenbezogenen Daten der Hilfe externer Dienstleister bedienen, erfolgt dies im Rahmen einer sogenannten Auftragsverarbeitung, bei der wir als Auftraggeber unseren Auftragnehmern gegenüber weisungsbefugt sind.
 2. Zum Betrieb unserer Webseite setzen wir für das Hosting einen externen Dienstleister ein. Wir hosten unsere Webseite über den Dienst Github Pages beim externen Anbieter Github (GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107 USA) auf Servern in den USA. Weitere Informationen zum Datenschutz bei Github finden Sie unter: <https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-privacy-statement#github-pages>. Diese Datenübermittlung in Drittstaaten erfolgt auf Grundlage der sogenannten EU-Standardvertragsklauseln (SCCs) und des EU-US Data Privacy Framework (<https://www.dataprivacyframework.gov/>). Github erläutert die Transfermechanismen unter <https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement#international-data-transfers> und <https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement#data-privacy-framework-dpf>.
@@ -54,38 +54,11 @@ Im Rahmen unserer „000000.limited“-Webseite verarbeiten wir die nachfolgend 
 
 ## Die Verarbeitung im Einzelnen
 
-### 1. Einkauf
-
-#### 1.1 Beschreibung der Verarbeitung
-
-Auf unserer Webseite haben wir Funktionen und Inhalte des Dienstes Pretix eingebunden. Pretix nutzen wir als Online-Shopsystem, das über ein JavaScript-Widget innerhalb unserer Webseite dargestellt wird.
-
-Sie können in unserem Online-Shop als Gast FRAGDENSTAAT-Kunstdrucke kaufen. Im Rahmen Ihres Bestellprozesses verarbeiten wir personenbezogene Daten von Ihnen. Die in unserem Online-Shop mit einem Sternchen „\*“ markierten Pflichtfelder müssen von Ihnen ausgefüllt werden. Ansonsten ist es uns nicht möglich, mit Ihnen einen Kaufvertrag zu schließen und Ihnen die gewünschte Ware zuzusenden. Alle weiteren Angaben sind freiwillig. Wenn Sie auf unserem Online-Shop einkaufen, nutzt Pretix ein technisch notwendiges Cookie, um den Bestellablauf zu ermöglichen und sich zu merken, welcher Warenkorb zu Ihnen gehört. Das Cookie wird gesetzt, sobald Sie mit dem Widget interagieren. Pretix speichert keine IP-Adressen, Browser-Informationen oder andere unnötige Metadaten über die Dauer Ihrer Anfrage hinaus. Bei einem Einkauf auf unserem Online-Shop bzw. der Abgabe eines Gebots können Sie darüber hinaus eine der angebotenen Zahlungsarten (Vorkasse, Lastschrift via Stripe und Kreditkarte via Stripe) zur Begleichung des Kaufpreises auswählen. Beim Abschluss Ihrer Bestellung werden die für die Zahlung erforderlichen Daten an den jeweiligen Zahlungsdienstleister weitergegeben. Darüber hinaus werden zur Abwicklung der Lieferung Ihr Vorname, Nachname und Ihre Anschrift an DHL oder UPS als Versanddienstleister übermittelt.
-
-#### 1.2 Zweck
-
-Die Verarbeitung erfolgt zum Abschluss und zur Abwicklung von Kaufverträgen.
-
-#### 1.3 Rechtsgrundlage
-
-Die Verarbeitung ist zum Abschluss und zur Erfüllung der Kaufverträge erforderlich (Art. 6 Abs. 1 lit. b DSGVO). Dies betrifft auch die Weitergabe der zur Abwicklung von Zahlungen erforderlichen Daten jeweiligen Zahlungsdienstleister und die Übermittlung der zur Lieferung von Warensendungen erforderlichen Daten an den Versanddienstleister DHL oder UPS.
-
-#### 1.4 Speicherdauer
-
-Wir sind aufgrund von handels- und steuerrechtlichen Vorgaben verpflichtet, Ihre Adress-, Zahlungs- und Bestelldaten für die Dauer von zehn Jahren zu speichern. Allerdings nehmen wir nach zwei Jahren eine Einschränkung der Verarbeitung vor. D.h. Ihre Daten werden dann nur noch zur Einhaltung der gesetzlichen Aufbewahrungsfristen gesondert aufbewahrt und nach deren Ablauf unverzüglich gelöscht.
-
-#### 1.5 Empfänger
-
-Zur Umsetzung unseres Online-Shops verwenden wir das Shopsystem Pretix, das von der rami.io GmbH, Berthold-Mogel-Straße 1, 69126 Heidelberg betrieben wird. Die Einbindung von Pretix erfolgt im Rahmen einer Auftragsverarbeitung. Weitere Infos zu Datenschutz bei pretix finden Sie hier: <https://pretix.eu/about/de/privacy>.  
-Zur Abwicklung Ihrer Zahlung werden personenbezogene Daten bei den Zahlungsarten „Kreditkarte“ und „Lastschrift“ an den Zahlungsdienstleister Stripe Payments Europe, Limited (SPEL), 1 Grand Canal Street Lower, Grand Canal Dock, Dublin, D02 H210, Ireland übermittelt. Weitere Informationen zum Datenschutz bei Stripe finden Sie unter <https://stripe.com/de/privacy>.
-
-Zur Durchführung und Abwicklung der Warenlieferung werden wir die dafür erforderlichen Daten an den Versanddienstleister DHL (DHL Paket GmbH, Sträßchenweg 10, 53113 Bonn) oder UPS (United Parcel Service Deutschland S.à r.l. & Co. OHG, Görlitzer Straße 1, 41460 Neuss) weitergeben.
-
 ### Bereitstellung der Webseite und Server-Logfiles Github
 
 Bei jedem Aufruf der Webseite erfasst unser Hosting-Anbieter Github automatisch Informationen, die Ihr Browser an den Github -Server übermittelt. Diese werden auch in den sogenannten Logfiles von Github gespeichert. Die Informationen umfassen IP-Adresse, die Adresse der vorher besuchten Website (Referer Anfrage-Header), Datum und Uhrzeit der Anfrage, Zeitzonendifferenz zur Greenwich Mean Time, Inhalt der Anforderung, HTTP-Statuscode, übertragene Datenmenge, Website, von der die Anforderung kommt und Informationen zu Browser und Betriebssystem. Die Informationen werden von Github zur Auslieferung der Webseite, der Aufrechterhaltung des technischen Betriebs der Server und zur Gewährleistung der Stabilität und Sicherheit verarbeitet. Wir haben keinerlei Zugriff auf diese Server-Logfiles. Ein wie auch immer geartetes Tracking der Webseitenbesucher:innen durch Github erfolgt nicht.
 
-#### 3. Matomo
+#### Matomo
 
 FragDenStaat setzt auf der „000000.limited“-Webseite „Matomo“ ein, eine Webanalysesoftware der Innocraft Ltd., 150 Willis St, 6011 Wellington, New Zealand. Matomo ist eine Open Source Software, die wir als Dienst selbst (und zwar nicht auf Github-Servern) betreiben. Wir verwenden Matomo ohne den Einsatz von Cookies und ohne sog. Fingerprinting, sondern nur auf Basis einer config-ID, die sich alle 24 Stunden ändert. Im Rahmen der Webanalyse über Matomo wird Ihre IP-Adresse ausschließlich um die letzten drei Stellen gekürzt erfasst, sodass eine Zuordnung nicht möglich ist (sogenanntes IP-Masking). Die von Matomo erstellten Statistiken beinhalten insbesondere, wie viele Nutzer unsere Website besuchen, aus welchem Land der Zugriff erfolgt, welche Unterseiten aufgerufen werden und über welche Links oder Suchbegriffe Besucher auf unsere Webseite gelangen. Die erfassten Informationen werden an unseren Server übertragen und allein dort gespeichert. Eine Weitergabe an Dritte – insbesondere an die Innocraft Ltd. – erfolgt nicht. Wir werden die anonymisierten Matomo-Analysedaten auch im Rahmen unseres internen FragDenStaat-Dashboards (Ziffer D. 20 der [FragDenStaat-Datenschutzerklärung](https://fragdenstaat.de/datenschutzerklaerung/#-20--fragdenstaat-dashboard)) verarbeiten.
 
