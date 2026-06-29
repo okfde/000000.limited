@@ -6,7 +6,7 @@
 
 
     Lange hat das Gesundheitsministerium den Sudhof-Bericht der Sachverständigen unter Verschluss gehalten. Da die Masken-Affäre jedoch vollständig aufgeklärt werden muss und die Öffentlichkeit ein Recht auf Transparenz hat, haben wir den Bericht veröffentlicht. Eine geschwärzte Seite daraus küren wir jetzt zur FragDenStaat-Kunstedition.
-  available: true
+  available: false
   images:
     - file: "../assets/editions/edition2025.png"
       alt: "„[Langer, komplett geschwärzter Absatz] Vergleiche sind durch gegenseitiges Entgegenkommen geprägt“"
@@ -56,7 +56,7 @@
     Wer bin ich und wenn ja wie viele? Das Bundeskriminalamt stellt sich im Rahmen der Grenzpolitik existenzielle Fragen. Die Behörde präsentierte auf einer Lobby-Konferenz der europäischen Grenzpolizei Frontex Überlegungen zum Morphen von Gesichtern, die sie schnell [zu grundsätzlichen Fragen führte](https://fragdenstaat.de/dokumente/8224-ts2_3/).
 
     Die schönen Folien wurden Teil unserer Recherche zu Frontex, die wir im Frühjahr als „[Frontex Files](https://fragdenstaat.de/blog/2021/02/05/frontex-files/)“ veröffentlichten – und jetzt zu einer unserer Kunsteditionen.
-  available: true
+  available: false
   pretixId: "807772"
   images:
     - file: "../assets/editions/edition2021.png"
@@ -88,7 +88,7 @@
   title: „Migrants“-Edition
   description: >
     Die Vorlage der Edition ist eine Antwort der EU-Grenzagentur Frontex [auf eine Anfrage zu seiner Mittelmeeroperation](https://www.asktheeu.org/en/request/jo_epn_triton_biweekly_analytica).
-  available: true
+  available: false
   pretixId: "808070"
   images:
     - file: "../assets/editions/edition2018.jpg"
