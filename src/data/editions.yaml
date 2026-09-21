@@ -6,7 +6,7 @@
 
 
     Lange hat das Gesundheitsministerium den Sudhof-Bericht der Sachverständigen unter Verschluss gehalten. Da die Masken-Affäre jedoch vollständig aufgeklärt werden muss und die Öffentlichkeit ein Recht auf Transparenz hat, haben wir den Bericht veröffentlicht. Eine geschwärzte Seite daraus küren wir jetzt zur FragDenStaat-Kunstedition.
-  available: false
+  available: true
   images:
     - file: "../assets/editions/edition2025.png"
       alt: "„[Langer, komplett geschwärzter Absatz] Vergleiche sind durch gegenseitiges Entgegenkommen geprägt“"
@@ -31,7 +31,7 @@
 
 
     Das Dokument ist der Lagebericht für Nigeria des Auswärtigen Amts aus 2022, den wir im Rahmen unserer Kampagne „Wie ist die Lage?“ gemeinsam mit ProAsyl befreien konnten. Es beschreibt eigentlich die Lage in Nigeria, wurde aber zu großen Teilen geschwärzt. [Wir haben deswegen das Auswärtige Amt verklagt.](https://fragdenstaat.de/blog/2023/09/28/lage-der-transparenz/)
-  available: false
+  available: true
   images:
     - file: "../assets/editions/edition2023.jpg"
       alt: "„Das Gesetz zur Informationsfreiheit garantiert jeder Person das Recht, auf Antrag Zugang zu amtlichen Informationen durch die Behörden zu erhalten. [Geschwärzt]“"
@@ -45,7 +45,7 @@
     Die Seite ist aus [unserer Recherche, die zeigt, wie der US-Tech-Riese seit Jahren darum kämpft, seine Autopilot-Technik in Deutschland auf die Straße zu bekommen](https://fragdenstaat.de/blog/2022/09/28/so-gefahrlich-ist-teslas-autopilot/). Trotz verheerender Einschätzungen von Sachverständigen.
 
     Was man im Verkehrsministerium über neue Systeme von Tesla denkt, bleibt allerdings unter schwarzen Balken verborgen. Nichtsdestotrotz wollten wir diese geschwärzte Kreation zur FragDenStaat-Kunstedition 2022 küren. Die limitierte „Klima“-Edition 2022 besteht aus 50 Kunstdrucken einer E-Mail von Unbekannt.
-  available: false
+  available: true
   images:
     - file: "../assets/editions/edition2022.png"
       alt: "„[Langer, komplett geschwärzter Absatz] Please consider the environment before printing this email.“"
@@ -56,7 +56,7 @@
     Wer bin ich und wenn ja wie viele? Das Bundeskriminalamt stellt sich im Rahmen der Grenzpolitik existenzielle Fragen. Die Behörde präsentierte auf einer Lobby-Konferenz der europäischen Grenzpolizei Frontex Überlegungen zum Morphen von Gesichtern, die sie schnell [zu grundsätzlichen Fragen führte](https://fragdenstaat.de/dokumente/8224-ts2_3/).
 
     Die schönen Folien wurden Teil unserer Recherche zu Frontex, die wir im Frühjahr als „[Frontex Files](https://fragdenstaat.de/blog/2021/02/05/frontex-files/)“ veröffentlichten – und jetzt zu einer unserer Kunsteditionen.
-  available: false
+  available: true
   pretixId: "807772"
   images:
     - file: "../assets/editions/edition2021.png"
@@ -75,7 +75,7 @@
   title: „Lyrik“-Edition
   description: >
     Die Vorlagen der Edition sind Antworten des schleswig-holsteinischen Bildungsministeriums auf Anfragen nach Deutsch-Abituraufgaben im Rahmen unserer [Kampagne FragSieAbi](http://fragdenstaat.de/kampagnen/frag-sie-abi/app/schleswig-holstein/). Das Ministerium schwärzte die in den Aufgaben enthaltenen Gedichte aus Urheberrechtsgründen, obwohl diese schon längst gemeinfrei sind.
-  available: false
+  available: true
   images:
     - file: "../assets/editions/edition2019-1.jpg"
       alt: "Johann Wolfgang von Goethe: Reisezehrung. „Entwöhnen [geschwärzt] die Liebe.“"
@@ -88,7 +88,7 @@
   title: „Migrants“-Edition
   description: >
     Die Vorlage der Edition ist eine Antwort der EU-Grenzagentur Frontex [auf eine Anfrage zu seiner Mittelmeeroperation](https://www.asktheeu.org/en/request/jo_epn_triton_biweekly_analytica).
-  available: false
+  available: true
   pretixId: "808070"
   images:
     - file: "../assets/editions/edition2018.jpg"
