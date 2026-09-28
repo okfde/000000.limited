@@ -1,3 +1,16 @@
+- year: 2026
+  id: "2026"
+  title: „Grenzen“-Edition
+  description: |
+    Es ist die bisher schwärzeste Kunst: Das Bundesinnenministerium (BMI) von Alexander Dobrindt will das Informationsfreiheitsgesetz abschaffen. Kein Wunder – schließlich ist das Gesetz den Beamten des konservativsten deutschen Ministeriums schon lange ein Dorn im Auge.
+
+    Und auch kein Wunder, dass das BMI schon jetzt kaum Infos über sein Handeln herausgibt. Gerade, wenn es um die rechtswidrigen Zurückweisungen an den deutschen Grenzen geht, gibt sich Innenminister Dobrindt schmallippig. Das zeigt sich auch an internen Dokumenten dazu, die das Ministerium uns zugeschickt hat. Viele Seiten sind komplett schwarz. So viel Druckerschwärze wie dieses Jahr mussten wir aber noch nie für unsere Kunsteditionen aufwenden.
+
+  available: true
+  images:
+    - file: "../assets/editions/edition2026.png"
+      alt: "„Ein großes schwarzes Rechteck, ausgedruckt und eingescannt."
+  pretixId: "1159663"
 - year: 2025
   id: "2025"
   title: „Masken“-Edition
